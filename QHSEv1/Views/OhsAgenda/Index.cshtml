@@ -1,0 +1,158 @@
+﻿@model IEnumerable<QHSEv1.Models.ohs_comm_agenda>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_meeting)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total_no_emp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_issues_def)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.required_attendance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.employer_co_chair)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.worker_co_chair)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guests)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_of_workplace_con)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_issues_identified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_complaint_received)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.were_there_issues)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_acc_inv_con)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_inc_inv_con)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.were_there_any_issues)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_inc_report_review)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_acc_report_review)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_work_refusals)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.meeting_topics_issues)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.add_com_ins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_2)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_meeting)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total_no_emp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_issues_def)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.required_attendance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employer_co_chair)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.worker_co_chair)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.guests)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_of_workplace_con)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_issues_identified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_complaint_received)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.were_there_issues)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_acc_inv_con)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_inc_inv_con)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.were_there_any_issues)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_inc_report_review)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_acc_report_review)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_work_refusals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.meeting_topics_issues)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.add_com_ins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_2)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

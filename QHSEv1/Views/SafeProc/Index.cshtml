@@ -1,0 +1,74 @@
+﻿@model IEnumerable<QHSEv1.Models.safe_work_procedure>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.safe_work_procedure_description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.development_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.version_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.review_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.next_review_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.swp_notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attach_other)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attach_swp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.safe_work_procedure_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.development_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.version_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.review_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.next_review_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.swp_notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attach_other)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attach_swp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

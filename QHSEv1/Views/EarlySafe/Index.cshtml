@@ -1,0 +1,188 @@
+﻿@model IEnumerable<QHSEv1.Models.early_safe_return_wp>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.plan_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.incident_ref_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_dept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.claim_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.start_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ancipated_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.worker_phone_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.worker_email_addr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.progress_report_req)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.injury_details)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.goals)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objective)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.plan_dev_coop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.worker_restrictions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.details_on_worker)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.worker)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.manager)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.return_to_work)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_3)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.plan_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.incident_ref_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_entry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_dept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.claim_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.start_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ancipated_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.worker_phone_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.worker_email_addr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.progress_report_req)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.injury_details)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.goals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.objective)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.plan_dev_coop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.worker_restrictions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.details_on_worker)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.worker)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.manager)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.return_to_work)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_3)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,122 @@
+﻿@model IEnumerable<QHSEv1.Models.occupational_history_form>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_department)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.from_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.to_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.job_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.physical)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chemical)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.biological)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.psychological)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.secondary_work)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hobbies_sports)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_related_exp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reproductive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_entry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_department)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.from_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.to_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.job_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.physical)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chemical)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.biological)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.psychological)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.secondary_work)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hobbies_sports)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_related_exp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.reproductive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

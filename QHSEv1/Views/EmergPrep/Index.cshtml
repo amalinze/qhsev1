@@ -1,0 +1,98 @@
+﻿@model IEnumerable<QHSEv1.Models.emerg_prep_practice>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_dept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_of_practice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.response_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.evaluation_notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.corr_action_recomm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_4)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_entry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_dept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_of_practice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.response_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.evaluation_notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.corr_action_recomm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_4)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

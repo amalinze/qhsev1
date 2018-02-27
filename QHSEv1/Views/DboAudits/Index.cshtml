@@ -1,0 +1,86 @@
+﻿@model IEnumerable<QHSEv1.Models.dbo_audits>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dbo_audit_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type_of_audit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.completed_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.auditing_organization)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attach_audits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attach_other)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_entry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dbo_audit_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type_of_audit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.completed_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.auditing_organization)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attach_audits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attach_other)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

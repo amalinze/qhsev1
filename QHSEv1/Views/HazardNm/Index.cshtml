@@ -1,0 +1,152 @@
+﻿@model IEnumerable<QHSEv1.Models.hazard_nm_fin_rep>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.incident_ref)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.event_status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.event_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_event)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.report_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.brief_desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.detailed_desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.observe_comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.recommended_cor_actions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.immediate_cor_actions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.violation_of_rules)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motor_veh_inc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.immediate_action)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.exposure_freequency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eyewitness_statement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.risk_of_injury)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.probability)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.investigation_attached)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.investigation_report)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.other_attachment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.incident_ref)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.event_status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.event_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_event)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.report_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.brief_desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.detailed_desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.observe_comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.recommended_cor_actions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.immediate_cor_actions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.violation_of_rules)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motor_veh_inc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.immediate_action)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.exposure_freequency)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eyewitness_statement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.risk_of_injury)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.probability)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.investigation_attached)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.investigation_report)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.other_attachment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

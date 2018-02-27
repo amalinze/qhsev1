@@ -1,0 +1,105 @@
+﻿@model IEnumerable<QHSEv1.Models.disciplinary_action>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.employee_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.company)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.action_taken)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.offences)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dbo_dept_notified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.appr_manager_notified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.employee_comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_2)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_entry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employee_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_area)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.company)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.action_taken)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.offences)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dbo_dept_notified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.appr_manager_notified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employee_comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_2)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

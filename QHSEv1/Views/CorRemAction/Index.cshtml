@@ -1,0 +1,98 @@
+﻿@model IEnumerable<QHSEv1.Models.cor_rem_action>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_dept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.action_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.action_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.action_rem_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.action_rem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.action_implimented)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.completion_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.action_com_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.results_of_actions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.staatus_of_action)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_entry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_dept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.action_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.action_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.action_rem_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.action_rem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.action_implimented)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.completion_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.action_com_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.results_of_actions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.staatus_of_action)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

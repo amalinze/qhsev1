@@ -1,0 +1,116 @@
+﻿@model IEnumerable<QHSEv1.Models.train_aware_comp>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.train_obtain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.train_desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.train_prov)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.certificat_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.issue_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.expiry_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cert_on_file)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.certificate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_entry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_area)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.train_obtain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.train_desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.train_prov)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.certificat_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.issue_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expiry_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cert_on_file)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.certificate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

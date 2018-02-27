@@ -1,0 +1,88 @@
+﻿@model QHSEv1.Models.safe_work_procedure
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>safe_work_procedure</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.safe_work_procedure_description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.safe_work_procedure_description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.development_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.development_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.version_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.version_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.review_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.review_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.next_review_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.next_review_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.swp_notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.swp_notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attach_other)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attach_other)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attach_swp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attach_swp)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

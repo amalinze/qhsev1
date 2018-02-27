@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f72d3ecd0faa40eabc604e25d1b7d1b2" Name="Diagram1">
+        <EntityTypeShape EntityType="qhsedbModel.audit_guildlines" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.company_information" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.contact" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.cor_rem_action" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.dbo_audits" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.dbo_manual" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.dbo_protection_programs" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.detailed_incident_invest_rep" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.disciplinary_action" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.early_safe_return_wp" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.emerg_prep_practice" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.emerg_rescue_plan" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.general_information" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.general_safety_meetings" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.hazard_nm_fin_rep" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.hazard_sub_emp_exp" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.journey_mgmt" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.legal_other_requierments" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.medical" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.meeting_planning_work" Width="1.5" PointX="14.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.mgmt_rev_agenda" Width="1.5" PointX="12.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.mgmt_rev_minute" Width="1.5" PointX="14.75" PointY="13.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.monthly_safety_summary" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.next_of_kin" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.occupational_history_form" Width="1.5" PointX="2.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.ohs_comm_agenda" Width="1.5" PointX="16.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.ohs_committee" Width="1.5" PointX="16.75" PointY="15.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.orientation_tr_mat" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.prob_solv_meet_rep" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.qualification" Width="1.5" PointX="8.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qhsedbModel.return_to_work_plan" Width="1.5" PointX="18.75" PointY="9.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.safe_work_procedure" Width="1.5" PointX="18.75" PointY="15.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="qhsedbModel.tool_box_topic" Width="1.5" PointX="10.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qhsedbModel.train_aware_comp" Width="1.5" PointX="12.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qhsedbModel.witness_statement" Width="1.5" PointX="18.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qhsedbModel.worker_comp_insurace_reports_stats" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

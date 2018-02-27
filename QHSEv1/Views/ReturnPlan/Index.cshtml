@@ -1,0 +1,122 @@
+﻿@model IEnumerable<QHSEv1.Models.return_to_work_plan>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.incident_ref_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_dept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.claim_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supevisor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RTW_coordinator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.week_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objectives)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.limitations)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.employee_comm_con)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.action_to_addr)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.incident_ref_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_entry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_dept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.claim_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supevisor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RTW_coordinator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.week_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.objectives)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.limitations)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employee_comm_con)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.action_to_addr)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

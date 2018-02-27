@@ -1,0 +1,80 @@
+﻿@model QHSEv1.Models.worker_comp_insurace_reports_stats
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>worker_comp_insurace_reports_stats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.worker_comp_insurace_reports_stats_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.worker_comp_insurace_reports_stats_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.project_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.project_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.department_work_area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.department_work_area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.details)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attachment_1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attachment_1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attachment_2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attachment_2)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

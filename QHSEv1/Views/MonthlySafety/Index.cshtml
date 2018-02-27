@@ -1,0 +1,200 @@
+﻿@model IEnumerable<QHSEv1.Models.monthly_safety_summary>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.for_month)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.for_year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.inspections)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.internal_audits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mgmt_safety_visit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emerg_res_drill)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.safety_orientation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JSA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.remedial_actions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.training_hours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_refusals)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tailgate_toolbox)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gen_safety_meeting)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dept_area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mgmt_review)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fatalities)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lost_time_inc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.restricted_work_cases)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.medical_treatment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.first_aid_treatment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.non_work_related)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motor_vehicle_inc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.near_misses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.equipment_damage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.equipment_losses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.environment_dist)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_entry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.for_month)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.for_year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inspections)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.internal_audits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mgmt_safety_visit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emerg_res_drill)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.safety_orientation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JSA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.remedial_actions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.training_hours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_refusals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tailgate_toolbox)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gen_safety_meeting)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dept_area)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mgmt_review)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fatalities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lost_time_inc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.restricted_work_cases)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.medical_treatment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.first_aid_treatment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.non_work_related)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motor_vehicle_inc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.near_misses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.equipment_damage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.equipment_losses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.environment_dist)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

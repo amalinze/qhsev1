@@ -1,0 +1,144 @@
+﻿@model QHSEv1.Models.mgmt_rev_agenda
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>mgmt_rev_agenda</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_of_entry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.meeting_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.meeting_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.objective)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.objective)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.meeting_called_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.meeting_called_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dt_of_meeting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dt_of_meeting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.project_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.project_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.topics_of_discussion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.topics_of_discussion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.desc_if_other)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desc_if_other)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attendance_req_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attendance_req_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.spec_meeting_top)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.spec_meeting_top)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.add_com_ins)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.add_com_ins)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attachment_1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attachment_1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attachment_2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attachment_2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attachment_3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attachment_3)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

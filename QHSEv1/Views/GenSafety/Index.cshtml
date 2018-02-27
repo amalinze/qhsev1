@@ -1,0 +1,128 @@
+﻿@model IEnumerable<QHSEv1.Models.general_safety_meetings>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_of_meeting)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.other_dept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shift)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_in_crew)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_attending)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.topic_disc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.employee_con_sug)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OHS_con_sug)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attended_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.managers_remarks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.presenter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.manager)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attachment_3)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_of_meeting)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_area)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.other_dept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shift)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_in_crew)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_attending)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.topic_disc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employee_con_sug)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OHS_con_sug)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attended_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.managers_remarks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.presenter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.manager)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attachment_3)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

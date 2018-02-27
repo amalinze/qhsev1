@@ -1,0 +1,256 @@
+﻿@model QHSEv1.Models.witness_statement
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>witness_statement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.incident_ref_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.incident_ref_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_of_entry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.project_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.project_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.work_area_dept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.work_area_dept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name_TP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_TP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email_addr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email_addr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.addrress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.addrress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.state_province)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.state_province)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.first_wit_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.first_wit_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.first_wit_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.first_wit_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.first_wit_comp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.first_wit_comp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.second_wit_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.second_wit_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.second_wit_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.second_wit_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.second_wit_comp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.second_wit_comp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.third_wit_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.third_wit_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.third_wit_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.third_wit_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.third_wit_comp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.third_wit_comp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.incident_desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.incident_desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.statement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.statement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.signature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.signature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sig_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sig_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.signed_witness_stmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.signed_witness_stmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attachment_1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attachment_1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attachment_2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attachment_2)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

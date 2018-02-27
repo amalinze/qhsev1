@@ -1,0 +1,206 @@
+﻿@model IEnumerable<QHSEv1.Models.hazard_sub_emp_exp>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.incident_ref_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_dept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_of_exposure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dur_of_exposure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.loc_of_exposure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chemical_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chemical_abstract)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trad_name_chem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type_of_exposure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.if_contact_WPBI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.how_did_expo_occur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.was_PPE_avail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.was_PPE_used)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.if_PPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.was_PTI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.were_any_symp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.if_so_desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.severity_of_exposure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.desc_sev_of_exposure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.long_time_from_work)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.est_lost_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.list_sug)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MSDS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.physicians_report)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.invest_report)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.other_attachment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.incident_ref_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_entry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_dept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_of_exposure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dur_of_exposure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.loc_of_exposure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chemical_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chemical_abstract)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trad_name_chem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type_of_exposure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.if_contact_WPBI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.how_did_expo_occur)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.was_PPE_avail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.was_PPE_used)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.if_PPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.was_PTI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.were_any_symp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.if_so_desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.severity_of_exposure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.desc_sev_of_exposure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.long_time_from_work)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.est_lost_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.list_sug)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MSDS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.physicians_report)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.invest_report)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.other_attachment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

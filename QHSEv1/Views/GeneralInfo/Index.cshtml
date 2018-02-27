@@ -1,0 +1,128 @@
+﻿@model IEnumerable<QHSEv1.Models.general_information>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.full_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.currently_employed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_area_dept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.street_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.state_province)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postal_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.home_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cell_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.medical_card_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.drivers_license_class)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.medical_condition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.insurance_coverage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.notes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.full_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.currently_employed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_area_dept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.street_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.state_province)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postal_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.home_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cell_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.medical_card_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.drivers_license_class)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.medical_condition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.insurance_coverage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.notes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

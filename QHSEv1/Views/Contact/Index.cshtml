@@ -1,0 +1,86 @@
+﻿@model IEnumerable<QHSEv1.Models.contact>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fullname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.company_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.department)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mobile_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.website_url)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.website_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attach_photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.about_contact)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fullname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.company_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.department)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mobile_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.website_url)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.website_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attach_photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.about_contact)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

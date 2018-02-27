@@ -1,0 +1,146 @@
+﻿@model IEnumerable<QHSEv1.Models.journey_mgmt>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.driver_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.co_driver_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.journey_status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vehicle_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.start_location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.destination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.start_dt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrival_dt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total_distance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total_travel_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rest_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor_start)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor_phone_start)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor_arrival)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor_phone_arrival)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.flight_route)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attach_map)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attach_directions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attach_other)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.driver_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.co_driver_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.journey_status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vehicle_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.start_location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.destination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_entry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.start_dt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arrival_dt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total_distance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total_travel_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rest_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor_start)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor_phone_start)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor_arrival)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor_phone_arrival)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.flight_route)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attach_map)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attach_directions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attach_other)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

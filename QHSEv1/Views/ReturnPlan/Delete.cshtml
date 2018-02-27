@@ -1,0 +1,152 @@
+﻿@model QHSEv1.Models.return_to_work_plan
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>return_to_work_plan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.incident_ref_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.incident_ref_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_of_entry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.project_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.project_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.work_dept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.work_dept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.claim_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.claim_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.supevisor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.supevisor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTW_coordinator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTW_coordinator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.week_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.week_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.objectives)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.objectives)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.limitations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.limitations)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duties)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duties)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employee_comm_con)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employee_comm_con)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.action_to_addr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.action_to_addr)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

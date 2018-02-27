@@ -1,0 +1,152 @@
+﻿@model QHSEv1.Models.occupational_history_form
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>occupational_history_form</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_of_entry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.work_department)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.work_department)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.from_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.from_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.to_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.to_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.job_title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.job_title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.physical)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.physical)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chemical)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chemical)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.biological)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.biological)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.psychological)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.psychological)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PPE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PPE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.secondary_work)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.secondary_work)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hobbies_sports)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hobbies_sports)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.work_related_exp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.work_related_exp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.reproductive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reproductive)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

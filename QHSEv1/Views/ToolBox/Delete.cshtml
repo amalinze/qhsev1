@@ -1,0 +1,104 @@
+﻿@model QHSEv1.Models.tool_box_topic
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tool_box_topic</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_of_entry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.topic_desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.topic_desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.project_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.project_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.work_dept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.work_dept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.topic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.topic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.question_concern)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.question_concern)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.developer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.developer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.supervisor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.supervisor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attach_tool)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attach_tool)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.other_attachment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.other_attachment)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,80 @@
+﻿@model IEnumerable<QHSEv1.Models.dbo_protection_programs>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.dbo_protection_programs_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_area_department)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description_of_program)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.version_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.revision_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.next_revision_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attach_program)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attach_other)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.dbo_protection_programs_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_area_department)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description_of_program)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.version_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.revision_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.next_revision_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attach_program)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attach_other)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

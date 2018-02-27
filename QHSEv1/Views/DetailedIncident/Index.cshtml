@@ -1,0 +1,512 @@
+﻿@model IEnumerable<QHSEv1.Models.detailed_incident_invest_rep>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.type_of_incident)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.if_other_explain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type_of_loss)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.explain_loss)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name_of_company)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.report_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_of_incident)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_update)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.incident_ref)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name_of_project)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_department)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.incident_location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name_of_supervisor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.first_worker_fn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.first_worker_position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.first_worker_est_RTW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.first_worker_cur_cond)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.first_worker_sym_disc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.second_worker_fn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.second_worker_position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.second_worker_est_RTW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.second_worker_cur_cond)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.second_worker_sym_disc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.return_to_work)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.explanation_RTW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.incident_classification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.incident_classification_env)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.incident_classification_sec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.brief_desc_of_inc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lead_investigator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.names_of_others_II)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.names_and_desc_TPI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.incident_stmt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sequence_of_event)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.specific_hazard_APPC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.body_part_affected)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.incident_factor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nature_of_burns)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.planning)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.explanation_planning)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.worker_aware_DR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.if_unaware_explain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.safe_work_PP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.explanation_SWPP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tools_and_equip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.work_design)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.explanation_work_design)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.knowledge_skill)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.explanation_knowledge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.capabilities)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.explanation_capabilities)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.judgement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.explanation_judgement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.communication)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comments_communication)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.natural_factors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.explanation_natural_factors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reasonable_cause_TC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.immediate_action_taken)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.immediate_action_taken_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.corrective_action_taken)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.accountabilities_for_CA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.safety_comm_rec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.root_cause_analysis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.snr_mng_sig_off)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.snr_mng_sig_off_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dbo_mng_sig_off)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor_sig_off)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor_sig_off_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.first_wit_stmt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.second_wit_stmt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.third_wit_stmt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo_drawing_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo_drawing_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo_drawing_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo_drawing_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo_drawing_5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.other_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.other_2)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.type_of_incident)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.if_other_explain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type_of_loss)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.explain_loss)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name_of_company)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.report_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_of_incident)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_update)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.incident_ref)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name_of_project)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_department)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.incident_location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name_of_supervisor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.first_worker_fn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.first_worker_position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.first_worker_est_RTW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.first_worker_cur_cond)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.first_worker_sym_disc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.second_worker_fn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.second_worker_position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.second_worker_est_RTW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.second_worker_cur_cond)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.second_worker_sym_disc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.return_to_work)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.explanation_RTW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.incident_classification)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.incident_classification_env)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.incident_classification_sec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.brief_desc_of_inc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lead_investigator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.names_of_others_II)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.names_and_desc_TPI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.incident_stmt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sequence_of_event)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.specific_hazard_APPC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.body_part_affected)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.incident_factor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nature_of_burns)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.planning)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.explanation_planning)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.worker_aware_DR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.if_unaware_explain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.safe_work_PP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.explanation_SWPP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tools_and_equip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.work_design)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.explanation_work_design)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.knowledge_skill)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.explanation_knowledge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.capabilities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.explanation_capabilities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.judgement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.explanation_judgement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.communication)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comments_communication)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.natural_factors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.explanation_natural_factors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.reasonable_cause_TC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.immediate_action_taken)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.immediate_action_taken_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.corrective_action_taken)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.accountabilities_for_CA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.safety_comm_rec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.root_cause_analysis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.snr_mng_sig_off)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.snr_mng_sig_off_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dbo_mng_sig_off)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor_sig_off)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor_sig_off_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.first_wit_stmt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.second_wit_stmt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.third_wit_stmt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo_drawing_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo_drawing_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo_drawing_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo_drawing_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo_drawing_5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.other_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.other_2)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,896 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qhsedbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="audit_guildlines">
+    <Key>
+      <PropertyRef Name="audit_guildlines_id" />
+    </Key>
+    <Property Name="audit_guildlines_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="description" Type="varchar" MaxLength="255" />
+    <Property Name="notes" Type="varchar(max)" />
+    <Property Name="attach_audit_guildline" Type="varchar" MaxLength="255" />
+    <Property Name="attach_other" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="company_information">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="company_name" Type="varchar" MaxLength="255" />
+    <Property Name="legal_name" Type="varchar" MaxLength="255" />
+    <Property Name="phone_number" Type="varchar" MaxLength="15" />
+    <Property Name="alternate_phone_number" Type="varchar" MaxLength="15" />
+    <Property Name="emergency_contact" Type="varchar" MaxLength="255" />
+    <Property Name="emergency_number" Type="varchar" MaxLength="15" />
+    <Property Name="email" Type="varchar" MaxLength="255" />
+    <Property Name="city" Type="varchar" MaxLength="255" />
+    <Property Name="street_address" Type="varchar" MaxLength="255" />
+    <Property Name="state_province" Type="varchar" MaxLength="255" />
+    <Property Name="postal_code" Type="varchar" MaxLength="15" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="contacts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="255" />
+    <Property Name="company_name" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="department" Type="varchar" MaxLength="255" />
+    <Property Name="gender" Type="varchar" MaxLength="255" />
+    <Property Name="work_number" Type="varchar" MaxLength="15" />
+    <Property Name="mobile_number" Type="varchar" MaxLength="15" />
+    <Property Name="website_url" Type="varchar" MaxLength="255" />
+    <Property Name="website_title" Type="varchar" MaxLength="255" />
+    <Property Name="attach_photo" Type="varchar" MaxLength="255" />
+    <Property Name="about_contact" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="cor_rem_action">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_dept" Type="varchar" MaxLength="255" />
+    <Property Name="action_type" Type="varchar" MaxLength="255" />
+    <Property Name="action_name" Type="varchar" MaxLength="255" />
+    <Property Name="action_rem_by" Type="varchar" MaxLength="255" />
+    <Property Name="action_rem" Type="varchar(max)" />
+    <Property Name="action_implimented" Type="varchar(max)" />
+    <Property Name="completion_date" Type="datetime" />
+    <Property Name="action_com_by" Type="varchar" MaxLength="255" />
+    <Property Name="results_of_actions" Type="varchar" MaxLength="255" />
+    <Property Name="staatus_of_action" Type="varchar" MaxLength="255" />
+    <Property Name="attachment" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="dbo_audits">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="dbo_audit_date" Type="datetime" />
+    <Property Name="type_of_audit" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="completed_by" Type="varchar" MaxLength="255" />
+    <Property Name="auditing_organization" Type="varchar" MaxLength="255" />
+    <Property Name="score" Type="varchar" MaxLength="255" />
+    <Property Name="notes" Type="varchar(max)" />
+    <Property Name="attach_audits" Type="varchar" MaxLength="255" />
+    <Property Name="attach_other" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="dbo_manual">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dbo_manual_date" Type="datetime" />
+    <Property Name="development_date" Type="datetime" />
+    <Property Name="revision_date" Type="datetime" />
+    <Property Name="next_revision_date" Type="datetime" />
+    <Property Name="version_number" Type="varchar" MaxLength="255" />
+    <Property Name="update_number" Type="varchar" MaxLength="255" />
+    <Property Name="revised_by" Type="varchar" MaxLength="255" />
+    <Property Name="approved_by" Type="varchar" MaxLength="255" />
+    <Property Name="attach_dbo_manual" Type="varchar" MaxLength="255" />
+    <Property Name="attach_other" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="dbo_protection_programs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dbo_protection_programs_date" Type="datetime" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_area_department" Type="varchar" MaxLength="255" />
+    <Property Name="description_of_program" Type="varchar" MaxLength="255" />
+    <Property Name="version_number" Type="varchar" MaxLength="255" />
+    <Property Name="revision_date" Type="datetime" />
+    <Property Name="next_revision_date" Type="datetime" />
+    <Property Name="notes" Type="varchar(max)" />
+    <Property Name="attach_program" Type="varchar" MaxLength="255" />
+    <Property Name="attach_other" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="detailed_incident_invest_rep">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type_of_incident" Type="varchar" MaxLength="255" />
+    <Property Name="if_other_explain" Type="varchar(max)" />
+    <Property Name="type_of_loss" Type="varchar" MaxLength="255" />
+    <Property Name="explain_loss" Type="varchar(max)" />
+    <Property Name="name_of_company" Type="varchar" MaxLength="500" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="report_date" Type="datetime" />
+    <Property Name="dt_of_incident" Type="datetime" />
+    <Property Name="date_of_update" Type="datetime" />
+    <Property Name="incident_ref" Type="varchar" MaxLength="255" />
+    <Property Name="name_of_project" Type="varchar" MaxLength="255" />
+    <Property Name="project_location" Type="varchar" MaxLength="255" />
+    <Property Name="work_department" Type="varchar" MaxLength="255" />
+    <Property Name="incident_location" Type="varchar" MaxLength="500" />
+    <Property Name="name_of_supervisor" Type="varchar" MaxLength="255" />
+    <Property Name="first_worker_fn" Type="varchar" MaxLength="255" />
+    <Property Name="first_worker_position" Type="varchar" MaxLength="255" />
+    <Property Name="first_worker_est_RTW" Type="varchar" MaxLength="255" />
+    <Property Name="first_worker_cur_cond" Type="varchar(max)" />
+    <Property Name="first_worker_sym_disc" Type="varchar(max)" />
+    <Property Name="second_worker_fn" Type="varchar" MaxLength="255" />
+    <Property Name="second_worker_position" Type="varchar" MaxLength="255" />
+    <Property Name="second_worker_est_RTW" Type="varchar" MaxLength="255" />
+    <Property Name="second_worker_cur_cond" Type="varchar(max)" />
+    <Property Name="second_worker_sym_disc" Type="varchar(max)" />
+    <Property Name="return_to_work" Type="varchar" MaxLength="255" />
+    <Property Name="explanation_RTW" Type="varchar(max)" />
+    <Property Name="incident_classification" Type="varchar" MaxLength="255" />
+    <Property Name="incident_classification_env" Type="varchar" MaxLength="255" />
+    <Property Name="incident_classification_sec" Type="varchar" MaxLength="255" />
+    <Property Name="brief_desc_of_inc" Type="varchar(max)" />
+    <Property Name="lead_investigator" Type="varchar" MaxLength="255" />
+    <Property Name="names_of_others_II" Type="varchar(max)" />
+    <Property Name="names_and_desc_TPI" Type="varchar(max)" />
+    <Property Name="incident_stmt" Type="varchar(max)" />
+    <Property Name="sequence_of_event" Type="varchar(max)" />
+    <Property Name="specific_hazard_APPC" Type="varchar" MaxLength="255" />
+    <Property Name="comments" Type="varchar(max)" />
+    <Property Name="body_part_affected" Type="varchar" MaxLength="255" />
+    <Property Name="incident_factor" Type="varchar" MaxLength="255" />
+    <Property Name="nature_of_burns" Type="varchar" MaxLength="255" />
+    <Property Name="planning" Type="varchar" MaxLength="255" />
+    <Property Name="explanation_planning" Type="varchar(max)" />
+    <Property Name="worker_aware_DR" Type="varchar" MaxLength="255" />
+    <Property Name="if_unaware_explain" Type="varchar(max)" />
+    <Property Name="safe_work_PP" Type="varchar" MaxLength="255" />
+    <Property Name="explanation_SWPP" Type="varchar(max)" />
+    <Property Name="tools_and_equip" Type="varchar(max)" />
+    <Property Name="work_design" Type="varchar" MaxLength="255" />
+    <Property Name="explanation_work_design" Type="varchar(max)" />
+    <Property Name="knowledge_skill" Type="varchar" MaxLength="255" />
+    <Property Name="explanation_knowledge" Type="varchar(max)" />
+    <Property Name="capabilities" Type="varchar" MaxLength="255" />
+    <Property Name="explanation_capabilities" Type="varchar(max)" />
+    <Property Name="judgement" Type="varchar" MaxLength="255" />
+    <Property Name="explanation_judgement" Type="varchar(max)" />
+    <Property Name="communication" Type="varchar" MaxLength="255" />
+    <Property Name="comments_communication" Type="varchar(max)" />
+    <Property Name="natural_factors" Type="varchar" MaxLength="255" />
+    <Property Name="explanation_natural_factors" Type="varchar(max)" />
+    <Property Name="reasonable_cause_TC" Type="varchar" MaxLength="255" />
+    <Property Name="immediate_action_taken" Type="varchar(max)" />
+    <Property Name="immediate_action_taken_by" Type="varchar" MaxLength="255" />
+    <Property Name="corrective_action_taken" Type="varchar(max)" />
+    <Property Name="accountabilities_for_CA" Type="varchar(max)" />
+    <Property Name="safety_comm_rec" Type="varchar(max)" />
+    <Property Name="root_cause_analysis" Type="varchar(max)" />
+    <Property Name="snr_mng_sig_off" Type="varchar" MaxLength="255" />
+    <Property Name="snr_mng_sig_off_date" Type="datetime" />
+    <Property Name="dbo_mng_sig_off" Type="varchar" MaxLength="255" />
+    <Property Name="supervisor_sig_off" Type="varchar" MaxLength="255" />
+    <Property Name="supervisor_sig_off_date" Type="varchar" MaxLength="255" />
+    <Property Name="first_wit_stmt" Type="varchar" MaxLength="255" />
+    <Property Name="second_wit_stmt" Type="varchar" MaxLength="255" />
+    <Property Name="third_wit_stmt" Type="varchar" MaxLength="255" />
+    <Property Name="photo_drawing_1" Type="varchar" MaxLength="255" />
+    <Property Name="photo_drawing_2" Type="varchar" MaxLength="255" />
+    <Property Name="photo_drawing_3" Type="varchar" MaxLength="255" />
+    <Property Name="photo_drawing_4" Type="varchar" MaxLength="255" />
+    <Property Name="photo_drawing_5" Type="varchar" MaxLength="255" />
+    <Property Name="other_1" Type="varchar" MaxLength="255" />
+    <Property Name="other_2" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="disciplinary_action">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="employee_name" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_area" Type="varchar" MaxLength="255" />
+    <Property Name="position" Type="varchar" MaxLength="255" />
+    <Property Name="company" Type="varchar" MaxLength="255" />
+    <Property Name="supervisor_name" Type="varchar" MaxLength="255" />
+    <Property Name="action_taken" Type="varchar" MaxLength="255" />
+    <Property Name="offences" Type="varchar(max)" />
+    <Property Name="dbo_dept_notified" Type="varchar" MaxLength="50" />
+    <Property Name="appr_manager_notified" Type="varchar" MaxLength="50" />
+    <Property Name="employee_comments" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_2" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="early_safe_return_wp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="plan_type" Type="varchar" MaxLength="255" />
+    <Property Name="incident_ref_no" Type="varchar" MaxLength="255" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_dept" Type="varchar" MaxLength="255" />
+    <Property Name="position" Type="varchar" MaxLength="255" />
+    <Property Name="claim_no" Type="varchar" MaxLength="255" />
+    <Property Name="start_date" Type="datetime" />
+    <Property Name="ancipated_date" Type="datetime" />
+    <Property Name="worker_phone_no" Type="varchar" MaxLength="255" />
+    <Property Name="worker_email_addr" Type="varchar" MaxLength="255" />
+    <Property Name="progress_report_req" Type="varchar" MaxLength="255" />
+    <Property Name="injury_details" Type="varchar(max)" />
+    <Property Name="supervisor" Type="varchar" MaxLength="255" />
+    <Property Name="goals" Type="varchar" MaxLength="255" />
+    <Property Name="objective" Type="varchar(max)" />
+    <Property Name="plan_dev_coop" Type="varchar" MaxLength="255" />
+    <Property Name="worker_restrictions" Type="varchar" MaxLength="255" />
+    <Property Name="details_on_worker" Type="varchar" MaxLength="255" />
+    <Property Name="duties" Type="varchar" MaxLength="255" />
+    <Property Name="hours" Type="varchar" MaxLength="255" />
+    <Property Name="worker" Type="varchar" MaxLength="255" />
+    <Property Name="manager" Type="varchar" MaxLength="255" />
+    <Property Name="return_to_work" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_2" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_3" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="emerg_prep_practice">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_dept" Type="varchar" MaxLength="255" />
+    <Property Name="location" Type="varchar" MaxLength="255" />
+    <Property Name="dt_of_practice" Type="datetime" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="response_time" Type="varchar" MaxLength="255" />
+    <Property Name="evaluation_notes" Type="varchar(max)" />
+    <Property Name="corr_action_recomm" Type="varchar(max)" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_2" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_3" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_4" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="emerg_rescue_plan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_dept" Type="varchar" MaxLength="255" />
+    <Property Name="plan_desc" Type="varchar" MaxLength="255" />
+    <Property Name="dev_date" Type="datetime" />
+    <Property Name="next_rev_date" Type="datetime" />
+    <Property Name="notes" Type="varchar(max)" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_2" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_3" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_4" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="general_information">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="full_name" Type="varchar" MaxLength="255" />
+    <Property Name="currently_employed" Type="varchar" MaxLength="50" />
+    <Property Name="position" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_area_dept" Type="varchar" MaxLength="255" />
+    <Property Name="gender" Type="varchar" MaxLength="255" />
+    <Property Name="street_address" Type="varchar" MaxLength="500" />
+    <Property Name="city" Type="varchar" MaxLength="255" />
+    <Property Name="state_province" Type="varchar" MaxLength="255" />
+    <Property Name="postal_code" Type="varchar" MaxLength="255" />
+    <Property Name="home_number" Type="varchar" MaxLength="255" />
+    <Property Name="cell_number" Type="varchar" MaxLength="255" />
+    <Property Name="email_address" Type="varchar" MaxLength="255" />
+    <Property Name="medical_card_number" Type="varchar" MaxLength="255" />
+    <Property Name="drivers_license_class" Type="varchar" MaxLength="255" />
+    <Property Name="medical_condition" Type="varchar" MaxLength="255" />
+    <Property Name="insurance_coverage" Type="varchar" MaxLength="255" />
+    <Property Name="notes" Type="varchar(max)" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="general_safety_meetings">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dt_of_meeting" Type="datetime" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_area" Type="varchar" MaxLength="255" />
+    <Property Name="other_dept" Type="varchar" MaxLength="255" />
+    <Property Name="shift" Type="varchar" MaxLength="255" />
+    <Property Name="no_in_crew" Type="varchar" MaxLength="255" />
+    <Property Name="no_attending" Type="varchar" MaxLength="255" />
+    <Property Name="topic_disc" Type="varchar(max)" />
+    <Property Name="employee_con_sug" Type="varchar(max)" />
+    <Property Name="OHS_con_sug" Type="varchar(max)" />
+    <Property Name="attended_by" Type="varchar(max)" />
+    <Property Name="managers_remarks" Type="varchar(max)" />
+    <Property Name="presenter" Type="varchar" MaxLength="255" />
+    <Property Name="supervisor" Type="varchar" MaxLength="255" />
+    <Property Name="manager" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_2" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_3" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="hazard_nm_fin_rep">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="incident_ref" Type="varchar" MaxLength="255" />
+    <Property Name="event_status" Type="varchar" MaxLength="255" />
+    <Property Name="event_type" Type="varchar" MaxLength="255" />
+    <Property Name="date_of_event" Type="datetime" />
+    <Property Name="report_date" Type="datetime" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="brief_desc" Type="varchar" MaxLength="500" />
+    <Property Name="detailed_desc" Type="varchar(max)" />
+    <Property Name="observe_comments" Type="varchar(max)" />
+    <Property Name="recommended_cor_actions" Type="varchar(max)" />
+    <Property Name="immediate_cor_actions" Type="varchar(max)" />
+    <Property Name="violation_of_rules" Type="varchar" MaxLength="255" />
+    <Property Name="motor_veh_inc" Type="varchar" MaxLength="255" />
+    <Property Name="immediate_action" Type="varchar(max)" />
+    <Property Name="location" Type="varchar" MaxLength="255" />
+    <Property Name="exposure_freequency" Type="varchar" MaxLength="255" />
+    <Property Name="eyewitness_statement" Type="varchar(max)" />
+    <Property Name="risk_of_injury" Type="varchar" MaxLength="255" />
+    <Property Name="probability" Type="varchar" MaxLength="255" />
+    <Property Name="investigation_attached" Type="varchar" MaxLength="255" />
+    <Property Name="investigation_report" Type="varchar" MaxLength="255" />
+    <Property Name="other_attachment" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="hazard_sub_emp_exp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="incident_ref_no" Type="varchar" MaxLength="255" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_dept" Type="varchar" MaxLength="255" />
+    <Property Name="position" Type="varchar" MaxLength="255" />
+    <Property Name="dt_of_exposure" Type="datetime" />
+    <Property Name="dur_of_exposure" Type="varchar" MaxLength="255" />
+    <Property Name="loc_of_exposure" Type="varchar" MaxLength="255" />
+    <Property Name="chemical_name" Type="varchar" MaxLength="255" />
+    <Property Name="chemical_abstract" Type="varchar" MaxLength="255" />
+    <Property Name="trad_name_chem" Type="varchar(max)" />
+    <Property Name="type_of_exposure" Type="varchar" MaxLength="255" />
+    <Property Name="if_contact_WPBI" Type="varchar" MaxLength="500" />
+    <Property Name="how_did_expo_occur" Type="varchar(max)" />
+    <Property Name="was_PPE_avail" Type="varchar" MaxLength="255" />
+    <Property Name="was_PPE_used" Type="varchar" MaxLength="255" />
+    <Property Name="if_PPE" Type="varchar(max)" />
+    <Property Name="was_PTI" Type="varchar(max)" />
+    <Property Name="were_any_symp" Type="varchar" MaxLength="255" />
+    <Property Name="if_so_desc" Type="varchar(max)" />
+    <Property Name="severity_of_exposure" Type="varchar" MaxLength="255" />
+    <Property Name="desc_sev_of_exposure" Type="varchar(max)" />
+    <Property Name="long_time_from_work" Type="varchar" MaxLength="255" />
+    <Property Name="est_lost_time" Type="varchar" MaxLength="255" />
+    <Property Name="list_sug" Type="varchar(max)" />
+    <Property Name="supervisor" Type="varchar" MaxLength="255" />
+    <Property Name="MSDS" Type="varchar" MaxLength="255" />
+    <Property Name="physicians_report" Type="varchar" MaxLength="255" />
+    <Property Name="invest_report" Type="varchar" MaxLength="255" />
+    <Property Name="other_attachment" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="journey_mgmt">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="driver_name" Type="varchar" MaxLength="255" />
+    <Property Name="co_driver_name" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="journey_status" Type="varchar" MaxLength="255" />
+    <Property Name="vehicle_id" Type="varchar" MaxLength="255" />
+    <Property Name="start_location" Type="varchar" MaxLength="255" />
+    <Property Name="destination" Type="varchar" MaxLength="255" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="start_dt" Type="datetime" />
+    <Property Name="arrival_dt" Type="datetime" />
+    <Property Name="total_distance" Type="varchar" MaxLength="255" />
+    <Property Name="total_travel_time" Type="varchar" MaxLength="255" />
+    <Property Name="rest_time" Type="varchar" MaxLength="255" />
+    <Property Name="supervisor_start" Type="varchar" MaxLength="255" />
+    <Property Name="supervisor_phone_start" Type="varchar" MaxLength="255" />
+    <Property Name="supervisor_arrival" Type="varchar" MaxLength="255" />
+    <Property Name="supervisor_phone_arrival" Type="varchar" MaxLength="255" />
+    <Property Name="flight_route" Type="varchar(max)" />
+    <Property Name="attach_map" Type="varchar" MaxLength="255" />
+    <Property Name="attach_directions" Type="varchar" MaxLength="255" />
+    <Property Name="attach_other" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="legal_other_requierments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="legal_other_requierments_date" Type="datetime" />
+    <Property Name="description_of_requirements" Type="varchar" MaxLength="255" />
+    <Property Name="notes" Type="varchar(max)" />
+    <Property Name="url" Type="varchar" MaxLength="255" />
+    <Property Name="title" Type="varchar" MaxLength="255" />
+    <Property Name="attach_requirements" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="medical">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="255" />
+    <Property Name="work_department" Type="varchar" MaxLength="255" />
+    <Property Name="position" Type="varchar" MaxLength="255" />
+    <Property Name="doctor_name" Type="varchar" MaxLength="255" />
+    <Property Name="doctor_number" Type="varchar" MaxLength="255" />
+    <Property Name="medical_condition" Type="varchar" MaxLength="255" />
+    <Property Name="medications" Type="varchar" MaxLength="255" />
+    <Property Name="emergency_instructions" Type="varchar" MaxLength="255" />
+    <Property Name="attachments" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="meeting_planning_work">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="dt_meeting" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_dept" Type="varchar" MaxLength="255" />
+    <Property Name="meeting_subject" Type="varchar" MaxLength="500" />
+    <Property Name="meeting_description" Type="varchar" MaxLength="500" />
+    <Property Name="required_attendance" Type="varchar(max)" />
+    <Property Name="gen_obj_meting" Type="varchar(max)" />
+    <Property Name="desired_end_result" Type="varchar(max)" />
+    <Property Name="planning_detail" Type="varchar(max)" />
+    <Property Name="meeting_prep_checklist" Type="varchar(max)" />
+    <Property Name="attacchment_1" Type="varchar" MaxLength="255" />
+    <Property Name="attacment" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="mgmt_rev_agenda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="meeting_time" Type="varchar" MaxLength="255" />
+    <Property Name="objective" Type="varchar(max)" />
+    <Property Name="meeting_called_by" Type="varchar" MaxLength="255" />
+    <Property Name="dt_of_meeting" Type="datetime" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="location" Type="varchar" MaxLength="255" />
+    <Property Name="topics_of_discussion" Type="varchar" MaxLength="255" />
+    <Property Name="desc_if_other" Type="varchar" MaxLength="255" />
+    <Property Name="attendance_req_by" Type="varchar" MaxLength="255" />
+    <Property Name="spec_meeting_top" Type="varchar(max)" />
+    <Property Name="add_com_ins" Type="varchar(max)" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_2" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_3" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="mgmt_rev_minute">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dt_of_meeting" Type="datetime" />
+    <Property Name="meeting_title" Type="varchar" MaxLength="255" />
+    <Property Name="obj_discussed" Type="varchar" MaxLength="255" />
+    <Property Name="meeting_cllaed_by" Type="varchar" MaxLength="255" />
+    <Property Name="min_sub_by" Type="varchar" MaxLength="255" />
+    <Property Name="loc_of_meeting" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="topics_discussed" Type="varchar" MaxLength="255" />
+    <Property Name="desc_if_other" Type="varchar(max)" />
+    <Property Name="in_attendance" Type="varchar(max)" />
+    <Property Name="meeting_top_iss" Type="varchar(max)" />
+    <Property Name="add_comm_ins" Type="varchar(max)" />
+    <Property Name="sign_in_sheet" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_2" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_3" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_4" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="monthly_safety_summary">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="for_month" Type="varchar" MaxLength="255" />
+    <Property Name="for_year" Type="varchar" MaxLength="255" />
+    <Property Name="inspections" Type="varchar" MaxLength="255" />
+    <Property Name="internal_audits" Type="varchar" MaxLength="255" />
+    <Property Name="mgmt_safety_visit" Type="varchar" MaxLength="255" />
+    <Property Name="emerg_res_drill" Type="varchar" MaxLength="255" />
+    <Property Name="safety_orientation" Type="varchar" MaxLength="255" />
+    <Property Name="JSA" Type="varchar" MaxLength="255" />
+    <Property Name="remedial_actions" Type="varchar" MaxLength="255" />
+    <Property Name="training_hours" Type="varchar" MaxLength="255" />
+    <Property Name="work_refusals" Type="varchar" MaxLength="255" />
+    <Property Name="tailgate_toolbox" Type="varchar" MaxLength="255" />
+    <Property Name="gen_safety_meeting" Type="varchar" MaxLength="255" />
+    <Property Name="dept_area" Type="varchar" MaxLength="255" />
+    <Property Name="mgmt_review" Type="varchar" MaxLength="255" />
+    <Property Name="fatalities" Type="varchar" MaxLength="255" />
+    <Property Name="lost_time_inc" Type="varchar" MaxLength="255" />
+    <Property Name="restricted_work_cases" Type="varchar" MaxLength="255" />
+    <Property Name="medical_treatment" Type="varchar" MaxLength="255" />
+    <Property Name="first_aid_treatment" Type="varchar" MaxLength="255" />
+    <Property Name="non_work_related" Type="varchar" MaxLength="255" />
+    <Property Name="motor_vehicle_inc" Type="varchar" MaxLength="255" />
+    <Property Name="near_misses" Type="varchar" MaxLength="255" />
+    <Property Name="equipment_damage" Type="varchar" MaxLength="255" />
+    <Property Name="equipment_losses" Type="varchar" MaxLength="255" />
+    <Property Name="environment_dist" Type="varchar" MaxLength="255" />
+    <Property Name="attachment" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="next_of_kin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="kin_full_name" Type="varchar" MaxLength="255" />
+    <Property Name="gender" Type="varchar" MaxLength="255" />
+    <Property Name="relationship" Type="varchar" MaxLength="255" />
+    <Property Name="description" Type="varchar" MaxLength="255" />
+    <Property Name="home_phone" Type="varchar" MaxLength="255" />
+    <Property Name="cell_phone" Type="varchar" MaxLength="255" />
+    <Property Name="email_address" Type="varchar" MaxLength="255" />
+    <Property Name="address_option" Type="varchar" MaxLength="255" />
+    <Property Name="street_address" Type="varchar" MaxLength="255" />
+    <Property Name="city" Type="varchar" MaxLength="255" />
+    <Property Name="postal_code" Type="varchar" MaxLength="255" />
+    <Property Name="state_province" Type="varchar" MaxLength="255" />
+    <Property Name="country" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="occupational_history_form">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="work_department" Type="varchar" MaxLength="255" />
+    <Property Name="position" Type="varchar" MaxLength="255" />
+    <Property Name="from_date" Type="datetime" />
+    <Property Name="to_date" Type="datetime" />
+    <Property Name="job_title" Type="varchar" MaxLength="255" />
+    <Property Name="physical" Type="varchar(max)" />
+    <Property Name="chemical" Type="varchar(max)" />
+    <Property Name="biological" Type="varchar(max)" />
+    <Property Name="psychological" Type="varchar(max)" />
+    <Property Name="PPE" Type="varchar(max)" />
+    <Property Name="secondary_work" Type="varchar(max)" />
+    <Property Name="hobbies_sports" Type="varchar(max)" />
+    <Property Name="work_related_exp" Type="varchar(max)" />
+    <Property Name="reproductive" Type="varchar(max)" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ohs_comm_agenda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dt_meeting" Type="datetime" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="total_no_emp" Type="varchar" MaxLength="255" />
+    <Property Name="no_issues_def" Type="varchar" MaxLength="255" />
+    <Property Name="required_attendance" Type="varchar(max)" />
+    <Property Name="employer_co_chair" Type="varchar" MaxLength="255" />
+    <Property Name="worker_co_chair" Type="varchar" MaxLength="255" />
+    <Property Name="guests" Type="varchar(max)" />
+    <Property Name="no_of_workplace_con" Type="varchar" MaxLength="255" />
+    <Property Name="no_issues_identified" Type="varchar" MaxLength="255" />
+    <Property Name="no_complaint_received" Type="varchar" MaxLength="255" />
+    <Property Name="were_there_issues" Type="varchar" MaxLength="255" />
+    <Property Name="no_acc_inv_con" Type="varchar" MaxLength="255" />
+    <Property Name="no_inc_inv_con" Type="varchar" MaxLength="255" />
+    <Property Name="were_there_any_issues" Type="varchar" MaxLength="255" />
+    <Property Name="no_inc_report_review" Type="varchar" MaxLength="255" />
+    <Property Name="no_acc_report_review" Type="varchar" MaxLength="255" />
+    <Property Name="no_work_refusals" Type="varchar" MaxLength="255" />
+    <Property Name="meeting_topics_issues" Type="varchar(max)" />
+    <Property Name="add_com_ins" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_2" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ohs_committee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dt_meeting" Type="datetime" />
+    <Property Name="meeting_title" Type="varchar" MaxLength="255" />
+    <Property Name="meeting_called_by" Type="varchar" MaxLength="255" />
+    <Property Name="min_sub_by" Type="varchar" MaxLength="255" />
+    <Property Name="location_of_meet" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="employer_co_chair" Type="varchar" MaxLength="255" />
+    <Property Name="worker_co_chair" Type="varchar" MaxLength="255" />
+    <Property Name="comm_rep_cer" Type="varchar(max)" />
+    <Property Name="meeting_topic" Type="varchar(max)" />
+    <Property Name="add_comm_ins" Type="varchar(max)" />
+    <Property Name="sign_in_sheet" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="atachment_2" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_3" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_4" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="orientation_tr_mat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="review_date" Type="datetime" />
+    <Property Name="work_dept" Type="varchar" MaxLength="255" />
+    <Property Name="desc_train_ori" Type="varchar" MaxLength="255" />
+    <Property Name="notes" Type="varchar(max)" />
+    <Property Name="orient_file_1" Type="varchar" MaxLength="255" />
+    <Property Name="orient_fiile_2" Type="varchar" MaxLength="255" />
+    <Property Name="orient_file_3" Type="varchar" MaxLength="255" />
+    <Property Name="orient_file_4" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="prob_solv_meet_rep">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_dept" Type="varchar" MaxLength="255" />
+    <Property Name="meeting_leader" Type="varchar" MaxLength="255" />
+    <Property Name="problem" Type="varchar(max)" />
+    <Property Name="analysis" Type="varchar(max)" />
+    <Property Name="corrective_action" Type="varchar(max)" />
+    <Property Name="follow_up" Type="varchar(max)" />
+    <Property Name="other_PAA" Type="varchar(max)" />
+    <Property Name="attendance" Type="varchar" MaxLength="255" />
+    <Property Name="reviewed_by" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="attchment_2" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="qualification">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="work_department" Type="varchar" MaxLength="255" />
+    <Property Name="position" Type="varchar" MaxLength="255" />
+    <Property Name="qualification_date" Type="datetime" />
+    <Property Name="q_expiry_date" Type="datetime" />
+    <Property Name="qualification" Type="varchar" MaxLength="255" />
+    <Property Name="notes" Type="varchar(max)" />
+    <Property Name="attach_certificate" Type="varchar(max)" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="return_to_work_plan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="incident_ref_no" Type="varchar" MaxLength="255" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_dept" Type="varchar" MaxLength="255" />
+    <Property Name="position" Type="varchar" MaxLength="255" />
+    <Property Name="claim_no" Type="varchar" MaxLength="255" />
+    <Property Name="supevisor" Type="varchar" MaxLength="255" />
+    <Property Name="RTW_coordinator" Type="varchar" MaxLength="255" />
+    <Property Name="week_no" Type="varchar" MaxLength="255" />
+    <Property Name="objectives" Type="varchar" MaxLength="255" />
+    <Property Name="limitations" Type="varchar" MaxLength="255" />
+    <Property Name="duties" Type="varchar" MaxLength="255" />
+    <Property Name="hours" Type="varchar" MaxLength="255" />
+    <Property Name="employee_comm_con" Type="varchar" MaxLength="255" />
+    <Property Name="action_to_addr" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="safe_work_procedure">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="safe_work_procedure_description" Type="varchar" MaxLength="500" />
+    <Property Name="development_date" Type="datetime" />
+    <Property Name="version_number" Type="varchar" MaxLength="255" />
+    <Property Name="review_date" Type="datetime" />
+    <Property Name="next_review_date" Type="datetime" />
+    <Property Name="swp_notes" Type="varchar(max)" />
+    <Property Name="attach_other" Type="varchar" MaxLength="255" />
+    <Property Name="attach_swp" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tool_box_topic">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="topic_desc" Type="varchar(max)" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_dept" Type="varchar" MaxLength="255" />
+    <Property Name="topic" Type="varchar" MaxLength="255" />
+    <Property Name="question_concern" Type="varchar" MaxLength="255" />
+    <Property Name="developer" Type="varchar" MaxLength="255" />
+    <Property Name="supervisor" Type="varchar" MaxLength="255" />
+    <Property Name="attach_tool" Type="varchar" MaxLength="255" />
+    <Property Name="other_attachment" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="train_aware_comp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_area" Type="varchar" MaxLength="255" />
+    <Property Name="position" Type="varchar" MaxLength="255" />
+    <Property Name="train_obtain" Type="varchar" MaxLength="255" />
+    <Property Name="train_desc" Type="varchar" MaxLength="255" />
+    <Property Name="train_prov" Type="varchar" MaxLength="255" />
+    <Property Name="certificat_number" Type="varchar" MaxLength="255" />
+    <Property Name="issue_date" Type="datetime" />
+    <Property Name="expiry_date" Type="datetime" />
+    <Property Name="cert_on_file" Type="varchar" MaxLength="255" />
+    <Property Name="notes" Type="varchar(max)" />
+    <Property Name="certificate" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="witness_statement">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="incident_ref_no" Type="varchar" MaxLength="255" />
+    <Property Name="date_of_entry" Type="datetime" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="work_area_dept" Type="varchar" MaxLength="255" />
+    <Property Name="position" Type="varchar" MaxLength="255" />
+    <Property Name="name_TP" Type="varchar" MaxLength="255" />
+    <Property Name="phone" Type="varchar" MaxLength="255" />
+    <Property Name="email_addr" Type="varchar" MaxLength="255" />
+    <Property Name="addrress" Type="varchar" MaxLength="255" />
+    <Property Name="state_province" Type="varchar" MaxLength="255" />
+    <Property Name="city" Type="varchar" MaxLength="255" />
+    <Property Name="employer" Type="varchar" MaxLength="255" />
+    <Property Name="first_wit_name" Type="varchar" MaxLength="255" />
+    <Property Name="first_wit_phone" Type="varchar" MaxLength="255" />
+    <Property Name="first_wit_comp" Type="varchar" MaxLength="255" />
+    <Property Name="second_wit_name" Type="varchar" MaxLength="255" />
+    <Property Name="second_wit_phone" Type="varchar" MaxLength="255" />
+    <Property Name="second_wit_comp" Type="varchar" MaxLength="255" />
+    <Property Name="third_wit_name" Type="varchar" MaxLength="255" />
+    <Property Name="third_wit_phone" Type="varchar" MaxLength="255" />
+    <Property Name="third_wit_comp" Type="varchar" MaxLength="255" />
+    <Property Name="incident_desc" Type="varchar(max)" />
+    <Property Name="statement" Type="varchar(max)" />
+    <Property Name="signature" Type="varchar" MaxLength="255" />
+    <Property Name="sig_date" Type="datetime" />
+    <Property Name="signed_witness_stmt" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_2" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="worker_comp_insurace_reports_stats">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="worker_comp_insurace_reports_stats_date" Type="varchar" MaxLength="255" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="project_name" Type="varchar" MaxLength="255" />
+    <Property Name="department_work_area" Type="varchar" MaxLength="255" />
+    <Property Name="details" Type="varchar(max)" />
+    <Property Name="attachment_1" Type="varchar" MaxLength="255" />
+    <Property Name="attachment_2" Type="varchar" MaxLength="255" />
+    <Property Name="userID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="qhsedbModelStoreContainer">
+    <EntitySet Name="audit_guildlines" EntityType="Self.audit_guildlines" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="company_information" EntityType="Self.company_information" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contacts" EntityType="Self.contacts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cor_rem_action" EntityType="Self.cor_rem_action" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dbo_audits" EntityType="Self.dbo_audits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dbo_manual" EntityType="Self.dbo_manual" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dbo_protection_programs" EntityType="Self.dbo_protection_programs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detailed_incident_invest_rep" EntityType="Self.detailed_incident_invest_rep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="disciplinary_action" EntityType="Self.disciplinary_action" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="early_safe_return_wp" EntityType="Self.early_safe_return_wp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="emerg_prep_practice" EntityType="Self.emerg_prep_practice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="emerg_rescue_plan" EntityType="Self.emerg_rescue_plan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="general_information" EntityType="Self.general_information" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="general_safety_meetings" EntityType="Self.general_safety_meetings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hazard_nm_fin_rep" EntityType="Self.hazard_nm_fin_rep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hazard_sub_emp_exp" EntityType="Self.hazard_sub_emp_exp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="journey_mgmt" EntityType="Self.journey_mgmt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="legal_other_requierments" EntityType="Self.legal_other_requierments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="medical" EntityType="Self.medical" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="meeting_planning_work" EntityType="Self.meeting_planning_work" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mgmt_rev_agenda" EntityType="Self.mgmt_rev_agenda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mgmt_rev_minute" EntityType="Self.mgmt_rev_minute" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="monthly_safety_summary" EntityType="Self.monthly_safety_summary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="next_of_kin" EntityType="Self.next_of_kin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="occupational_history_form" EntityType="Self.occupational_history_form" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ohs_comm_agenda" EntityType="Self.ohs_comm_agenda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ohs_committee" EntityType="Self.ohs_committee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orientation_tr_mat" EntityType="Self.orientation_tr_mat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="prob_solv_meet_rep" EntityType="Self.prob_solv_meet_rep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qualification" EntityType="Self.qualification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="return_to_work_plan" EntityType="Self.return_to_work_plan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="safe_work_procedure" EntityType="Self.safe_work_procedure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tool_box_topic" EntityType="Self.tool_box_topic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="train_aware_comp" EntityType="Self.train_aware_comp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="witness_statement" EntityType="Self.witness_statement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="worker_comp_insurace_reports_stats" EntityType="Self.worker_comp_insurace_reports_stats" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

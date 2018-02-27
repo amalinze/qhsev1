@@ -1,0 +1,144 @@
+﻿@model QHSEv1.Models.train_aware_comp
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>train_aware_comp</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_of_entry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.project_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.project_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.work_area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.work_area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.train_obtain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.train_obtain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.train_desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.train_desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.train_prov)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.train_prov)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.certificat_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.certificat_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.issue_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.issue_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.expiry_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.expiry_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cert_on_file)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cert_on_file)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.certificate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.certificate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attachment_1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attachment_1)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

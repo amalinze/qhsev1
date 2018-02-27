@@ -1,0 +1,56 @@
+﻿@model IEnumerable<QHSEv1.Models.audit_guildlines>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.audit_guildlines_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_entry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attach_audit_guildline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attach_other)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.audit_guildlines_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_entry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attach_audit_guildline)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attach_other)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.audit_guildlines_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.audit_guildlines_id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,860 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="qhsedbModelStoreContainer" CdmEntityContainer="qhsedbEntities">
+    <EntitySetMapping Name="audit_guildlines">
+      <EntityTypeMapping TypeName="qhsedbModel.audit_guildlines">
+        <MappingFragment StoreEntitySet="audit_guildlines">
+          <ScalarProperty Name="audit_guildlines_id" ColumnName="audit_guildlines_id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="attach_audit_guildline" ColumnName="attach_audit_guildline" />
+          <ScalarProperty Name="attach_other" ColumnName="attach_other" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="company_information">
+      <EntityTypeMapping TypeName="qhsedbModel.company_information">
+        <MappingFragment StoreEntitySet="company_information">
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="legal_name" ColumnName="legal_name" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="alternate_phone_number" ColumnName="alternate_phone_number" />
+          <ScalarProperty Name="emergency_contact" ColumnName="emergency_contact" />
+          <ScalarProperty Name="emergency_number" ColumnName="emergency_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="street_address" ColumnName="street_address" />
+          <ScalarProperty Name="state_province" ColumnName="state_province" />
+          <ScalarProperty Name="postal_code" ColumnName="postal_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contacts">
+      <EntityTypeMapping TypeName="qhsedbModel.contact">
+        <MappingFragment StoreEntitySet="contacts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="work_number" ColumnName="work_number" />
+          <ScalarProperty Name="mobile_number" ColumnName="mobile_number" />
+          <ScalarProperty Name="website_url" ColumnName="website_url" />
+          <ScalarProperty Name="website_title" ColumnName="website_title" />
+          <ScalarProperty Name="attach_photo" ColumnName="attach_photo" />
+          <ScalarProperty Name="about_contact" ColumnName="about_contact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cor_rem_action">
+      <EntityTypeMapping TypeName="qhsedbModel.cor_rem_action">
+        <MappingFragment StoreEntitySet="cor_rem_action">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_dept" ColumnName="work_dept" />
+          <ScalarProperty Name="action_type" ColumnName="action_type" />
+          <ScalarProperty Name="action_name" ColumnName="action_name" />
+          <ScalarProperty Name="action_rem_by" ColumnName="action_rem_by" />
+          <ScalarProperty Name="action_rem" ColumnName="action_rem" />
+          <ScalarProperty Name="action_implimented" ColumnName="action_implimented" />
+          <ScalarProperty Name="completion_date" ColumnName="completion_date" />
+          <ScalarProperty Name="action_com_by" ColumnName="action_com_by" />
+          <ScalarProperty Name="results_of_actions" ColumnName="results_of_actions" />
+          <ScalarProperty Name="staatus_of_action" ColumnName="staatus_of_action" />
+          <ScalarProperty Name="attachment" ColumnName="attachment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dbo_audits">
+      <EntityTypeMapping TypeName="qhsedbModel.dbo_audits">
+        <MappingFragment StoreEntitySet="dbo_audits">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="dbo_audit_date" ColumnName="dbo_audit_date" />
+          <ScalarProperty Name="type_of_audit" ColumnName="type_of_audit" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="completed_by" ColumnName="completed_by" />
+          <ScalarProperty Name="auditing_organization" ColumnName="auditing_organization" />
+          <ScalarProperty Name="score" ColumnName="score" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="attach_audits" ColumnName="attach_audits" />
+          <ScalarProperty Name="attach_other" ColumnName="attach_other" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dbo_manual">
+      <EntityTypeMapping TypeName="qhsedbModel.dbo_manual">
+        <MappingFragment StoreEntitySet="dbo_manual">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dbo_manual_date" ColumnName="dbo_manual_date" />
+          <ScalarProperty Name="development_date" ColumnName="development_date" />
+          <ScalarProperty Name="revision_date" ColumnName="revision_date" />
+          <ScalarProperty Name="next_revision_date" ColumnName="next_revision_date" />
+          <ScalarProperty Name="version_number" ColumnName="version_number" />
+          <ScalarProperty Name="update_number" ColumnName="update_number" />
+          <ScalarProperty Name="revised_by" ColumnName="revised_by" />
+          <ScalarProperty Name="approved_by" ColumnName="approved_by" />
+          <ScalarProperty Name="attach_dbo_manual" ColumnName="attach_dbo_manual" />
+          <ScalarProperty Name="attach_other" ColumnName="attach_other" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dbo_protection_programs">
+      <EntityTypeMapping TypeName="qhsedbModel.dbo_protection_programs">
+        <MappingFragment StoreEntitySet="dbo_protection_programs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dbo_protection_programs_date" ColumnName="dbo_protection_programs_date" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_area_department" ColumnName="work_area_department" />
+          <ScalarProperty Name="description_of_program" ColumnName="description_of_program" />
+          <ScalarProperty Name="version_number" ColumnName="version_number" />
+          <ScalarProperty Name="revision_date" ColumnName="revision_date" />
+          <ScalarProperty Name="next_revision_date" ColumnName="next_revision_date" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="attach_program" ColumnName="attach_program" />
+          <ScalarProperty Name="attach_other" ColumnName="attach_other" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="detailed_incident_invest_rep">
+      <EntityTypeMapping TypeName="qhsedbModel.detailed_incident_invest_rep">
+        <MappingFragment StoreEntitySet="detailed_incident_invest_rep">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type_of_incident" ColumnName="type_of_incident" />
+          <ScalarProperty Name="if_other_explain" ColumnName="if_other_explain" />
+          <ScalarProperty Name="type_of_loss" ColumnName="type_of_loss" />
+          <ScalarProperty Name="explain_loss" ColumnName="explain_loss" />
+          <ScalarProperty Name="name_of_company" ColumnName="name_of_company" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="report_date" ColumnName="report_date" />
+          <ScalarProperty Name="dt_of_incident" ColumnName="dt_of_incident" />
+          <ScalarProperty Name="date_of_update" ColumnName="date_of_update" />
+          <ScalarProperty Name="incident_ref" ColumnName="incident_ref" />
+          <ScalarProperty Name="name_of_project" ColumnName="name_of_project" />
+          <ScalarProperty Name="project_location" ColumnName="project_location" />
+          <ScalarProperty Name="work_department" ColumnName="work_department" />
+          <ScalarProperty Name="incident_location" ColumnName="incident_location" />
+          <ScalarProperty Name="name_of_supervisor" ColumnName="name_of_supervisor" />
+          <ScalarProperty Name="first_worker_fn" ColumnName="first_worker_fn" />
+          <ScalarProperty Name="first_worker_position" ColumnName="first_worker_position" />
+          <ScalarProperty Name="first_worker_est_RTW" ColumnName="first_worker_est_RTW" />
+          <ScalarProperty Name="first_worker_cur_cond" ColumnName="first_worker_cur_cond" />
+          <ScalarProperty Name="first_worker_sym_disc" ColumnName="first_worker_sym_disc" />
+          <ScalarProperty Name="second_worker_fn" ColumnName="second_worker_fn" />
+          <ScalarProperty Name="second_worker_position" ColumnName="second_worker_position" />
+          <ScalarProperty Name="second_worker_est_RTW" ColumnName="second_worker_est_RTW" />
+          <ScalarProperty Name="second_worker_cur_cond" ColumnName="second_worker_cur_cond" />
+          <ScalarProperty Name="second_worker_sym_disc" ColumnName="second_worker_sym_disc" />
+          <ScalarProperty Name="return_to_work" ColumnName="return_to_work" />
+          <ScalarProperty Name="explanation_RTW" ColumnName="explanation_RTW" />
+          <ScalarProperty Name="incident_classification" ColumnName="incident_classification" />
+          <ScalarProperty Name="incident_classification_env" ColumnName="incident_classification_env" />
+          <ScalarProperty Name="incident_classification_sec" ColumnName="incident_classification_sec" />
+          <ScalarProperty Name="brief_desc_of_inc" ColumnName="brief_desc_of_inc" />
+          <ScalarProperty Name="lead_investigator" ColumnName="lead_investigator" />
+          <ScalarProperty Name="names_of_others_II" ColumnName="names_of_others_II" />
+          <ScalarProperty Name="names_and_desc_TPI" ColumnName="names_and_desc_TPI" />
+          <ScalarProperty Name="incident_stmt" ColumnName="incident_stmt" />
+          <ScalarProperty Name="sequence_of_event" ColumnName="sequence_of_event" />
+          <ScalarProperty Name="specific_hazard_APPC" ColumnName="specific_hazard_APPC" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="body_part_affected" ColumnName="body_part_affected" />
+          <ScalarProperty Name="incident_factor" ColumnName="incident_factor" />
+          <ScalarProperty Name="nature_of_burns" ColumnName="nature_of_burns" />
+          <ScalarProperty Name="planning" ColumnName="planning" />
+          <ScalarProperty Name="explanation_planning" ColumnName="explanation_planning" />
+          <ScalarProperty Name="worker_aware_DR" ColumnName="worker_aware_DR" />
+          <ScalarProperty Name="if_unaware_explain" ColumnName="if_unaware_explain" />
+          <ScalarProperty Name="safe_work_PP" ColumnName="safe_work_PP" />
+          <ScalarProperty Name="explanation_SWPP" ColumnName="explanation_SWPP" />
+          <ScalarProperty Name="tools_and_equip" ColumnName="tools_and_equip" />
+          <ScalarProperty Name="work_design" ColumnName="work_design" />
+          <ScalarProperty Name="explanation_work_design" ColumnName="explanation_work_design" />
+          <ScalarProperty Name="knowledge_skill" ColumnName="knowledge_skill" />
+          <ScalarProperty Name="explanation_knowledge" ColumnName="explanation_knowledge" />
+          <ScalarProperty Name="capabilities" ColumnName="capabilities" />
+          <ScalarProperty Name="explanation_capabilities" ColumnName="explanation_capabilities" />
+          <ScalarProperty Name="judgement" ColumnName="judgement" />
+          <ScalarProperty Name="explanation_judgement" ColumnName="explanation_judgement" />
+          <ScalarProperty Name="communication" ColumnName="communication" />
+          <ScalarProperty Name="comments_communication" ColumnName="comments_communication" />
+          <ScalarProperty Name="natural_factors" ColumnName="natural_factors" />
+          <ScalarProperty Name="explanation_natural_factors" ColumnName="explanation_natural_factors" />
+          <ScalarProperty Name="reasonable_cause_TC" ColumnName="reasonable_cause_TC" />
+          <ScalarProperty Name="immediate_action_taken" ColumnName="immediate_action_taken" />
+          <ScalarProperty Name="immediate_action_taken_by" ColumnName="immediate_action_taken_by" />
+          <ScalarProperty Name="corrective_action_taken" ColumnName="corrective_action_taken" />
+          <ScalarProperty Name="accountabilities_for_CA" ColumnName="accountabilities_for_CA" />
+          <ScalarProperty Name="safety_comm_rec" ColumnName="safety_comm_rec" />
+          <ScalarProperty Name="root_cause_analysis" ColumnName="root_cause_analysis" />
+          <ScalarProperty Name="snr_mng_sig_off" ColumnName="snr_mng_sig_off" />
+          <ScalarProperty Name="snr_mng_sig_off_date" ColumnName="snr_mng_sig_off_date" />
+          <ScalarProperty Name="dbo_mng_sig_off" ColumnName="dbo_mng_sig_off" />
+          <ScalarProperty Name="supervisor_sig_off" ColumnName="supervisor_sig_off" />
+          <ScalarProperty Name="supervisor_sig_off_date" ColumnName="supervisor_sig_off_date" />
+          <ScalarProperty Name="first_wit_stmt" ColumnName="first_wit_stmt" />
+          <ScalarProperty Name="second_wit_stmt" ColumnName="second_wit_stmt" />
+          <ScalarProperty Name="third_wit_stmt" ColumnName="third_wit_stmt" />
+          <ScalarProperty Name="photo_drawing_1" ColumnName="photo_drawing_1" />
+          <ScalarProperty Name="photo_drawing_2" ColumnName="photo_drawing_2" />
+          <ScalarProperty Name="photo_drawing_3" ColumnName="photo_drawing_3" />
+          <ScalarProperty Name="photo_drawing_4" ColumnName="photo_drawing_4" />
+          <ScalarProperty Name="photo_drawing_5" ColumnName="photo_drawing_5" />
+          <ScalarProperty Name="other_1" ColumnName="other_1" />
+          <ScalarProperty Name="other_2" ColumnName="other_2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disciplinary_action">
+      <EntityTypeMapping TypeName="qhsedbModel.disciplinary_action">
+        <MappingFragment StoreEntitySet="disciplinary_action">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="employee_name" ColumnName="employee_name" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_area" ColumnName="work_area" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="supervisor_name" ColumnName="supervisor_name" />
+          <ScalarProperty Name="action_taken" ColumnName="action_taken" />
+          <ScalarProperty Name="offences" ColumnName="offences" />
+          <ScalarProperty Name="dbo_dept_notified" ColumnName="dbo_dept_notified" />
+          <ScalarProperty Name="appr_manager_notified" ColumnName="appr_manager_notified" />
+          <ScalarProperty Name="employee_comments" ColumnName="employee_comments" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+          <ScalarProperty Name="attachment_2" ColumnName="attachment_2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="early_safe_return_wp">
+      <EntityTypeMapping TypeName="qhsedbModel.early_safe_return_wp">
+        <MappingFragment StoreEntitySet="early_safe_return_wp">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="plan_type" ColumnName="plan_type" />
+          <ScalarProperty Name="incident_ref_no" ColumnName="incident_ref_no" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_dept" ColumnName="work_dept" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="claim_no" ColumnName="claim_no" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="ancipated_date" ColumnName="ancipated_date" />
+          <ScalarProperty Name="worker_phone_no" ColumnName="worker_phone_no" />
+          <ScalarProperty Name="worker_email_addr" ColumnName="worker_email_addr" />
+          <ScalarProperty Name="progress_report_req" ColumnName="progress_report_req" />
+          <ScalarProperty Name="injury_details" ColumnName="injury_details" />
+          <ScalarProperty Name="supervisor" ColumnName="supervisor" />
+          <ScalarProperty Name="goals" ColumnName="goals" />
+          <ScalarProperty Name="objective" ColumnName="objective" />
+          <ScalarProperty Name="plan_dev_coop" ColumnName="plan_dev_coop" />
+          <ScalarProperty Name="worker_restrictions" ColumnName="worker_restrictions" />
+          <ScalarProperty Name="details_on_worker" ColumnName="details_on_worker" />
+          <ScalarProperty Name="duties" ColumnName="duties" />
+          <ScalarProperty Name="hours" ColumnName="hours" />
+          <ScalarProperty Name="worker" ColumnName="worker" />
+          <ScalarProperty Name="manager" ColumnName="manager" />
+          <ScalarProperty Name="return_to_work" ColumnName="return_to_work" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+          <ScalarProperty Name="attachment_2" ColumnName="attachment_2" />
+          <ScalarProperty Name="attachment_3" ColumnName="attachment_3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emerg_prep_practice">
+      <EntityTypeMapping TypeName="qhsedbModel.emerg_prep_practice">
+        <MappingFragment StoreEntitySet="emerg_prep_practice">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_dept" ColumnName="work_dept" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="dt_of_practice" ColumnName="dt_of_practice" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="response_time" ColumnName="response_time" />
+          <ScalarProperty Name="evaluation_notes" ColumnName="evaluation_notes" />
+          <ScalarProperty Name="corr_action_recomm" ColumnName="corr_action_recomm" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+          <ScalarProperty Name="attachment_2" ColumnName="attachment_2" />
+          <ScalarProperty Name="attachment_3" ColumnName="attachment_3" />
+          <ScalarProperty Name="attachment_4" ColumnName="attachment_4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emerg_rescue_plan">
+      <EntityTypeMapping TypeName="qhsedbModel.emerg_rescue_plan">
+        <MappingFragment StoreEntitySet="emerg_rescue_plan">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_dept" ColumnName="work_dept" />
+          <ScalarProperty Name="plan_desc" ColumnName="plan_desc" />
+          <ScalarProperty Name="dev_date" ColumnName="dev_date" />
+          <ScalarProperty Name="next_rev_date" ColumnName="next_rev_date" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+          <ScalarProperty Name="attachment_2" ColumnName="attachment_2" />
+          <ScalarProperty Name="attachment_3" ColumnName="attachment_3" />
+          <ScalarProperty Name="attachment_4" ColumnName="attachment_4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="general_information">
+      <EntityTypeMapping TypeName="qhsedbModel.general_information">
+        <MappingFragment StoreEntitySet="general_information">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="full_name" ColumnName="full_name" />
+          <ScalarProperty Name="currently_employed" ColumnName="currently_employed" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_area_dept" ColumnName="work_area_dept" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="street_address" ColumnName="street_address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state_province" ColumnName="state_province" />
+          <ScalarProperty Name="postal_code" ColumnName="postal_code" />
+          <ScalarProperty Name="home_number" ColumnName="home_number" />
+          <ScalarProperty Name="cell_number" ColumnName="cell_number" />
+          <ScalarProperty Name="email_address" ColumnName="email_address" />
+          <ScalarProperty Name="medical_card_number" ColumnName="medical_card_number" />
+          <ScalarProperty Name="drivers_license_class" ColumnName="drivers_license_class" />
+          <ScalarProperty Name="medical_condition" ColumnName="medical_condition" />
+          <ScalarProperty Name="insurance_coverage" ColumnName="insurance_coverage" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="general_safety_meetings">
+      <EntityTypeMapping TypeName="qhsedbModel.general_safety_meetings">
+        <MappingFragment StoreEntitySet="general_safety_meetings">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dt_of_meeting" ColumnName="dt_of_meeting" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_area" ColumnName="work_area" />
+          <ScalarProperty Name="other_dept" ColumnName="other_dept" />
+          <ScalarProperty Name="shift" ColumnName="shift" />
+          <ScalarProperty Name="no_in_crew" ColumnName="no_in_crew" />
+          <ScalarProperty Name="no_attending" ColumnName="no_attending" />
+          <ScalarProperty Name="topic_disc" ColumnName="topic_disc" />
+          <ScalarProperty Name="employee_con_sug" ColumnName="employee_con_sug" />
+          <ScalarProperty Name="OHS_con_sug" ColumnName="OHS_con_sug" />
+          <ScalarProperty Name="attended_by" ColumnName="attended_by" />
+          <ScalarProperty Name="managers_remarks" ColumnName="managers_remarks" />
+          <ScalarProperty Name="presenter" ColumnName="presenter" />
+          <ScalarProperty Name="supervisor" ColumnName="supervisor" />
+          <ScalarProperty Name="manager" ColumnName="manager" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+          <ScalarProperty Name="attachment_2" ColumnName="attachment_2" />
+          <ScalarProperty Name="attachment_3" ColumnName="attachment_3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hazard_nm_fin_rep">
+      <EntityTypeMapping TypeName="qhsedbModel.hazard_nm_fin_rep">
+        <MappingFragment StoreEntitySet="hazard_nm_fin_rep">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="incident_ref" ColumnName="incident_ref" />
+          <ScalarProperty Name="event_status" ColumnName="event_status" />
+          <ScalarProperty Name="event_type" ColumnName="event_type" />
+          <ScalarProperty Name="date_of_event" ColumnName="date_of_event" />
+          <ScalarProperty Name="report_date" ColumnName="report_date" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="brief_desc" ColumnName="brief_desc" />
+          <ScalarProperty Name="detailed_desc" ColumnName="detailed_desc" />
+          <ScalarProperty Name="observe_comments" ColumnName="observe_comments" />
+          <ScalarProperty Name="recommended_cor_actions" ColumnName="recommended_cor_actions" />
+          <ScalarProperty Name="immediate_cor_actions" ColumnName="immediate_cor_actions" />
+          <ScalarProperty Name="violation_of_rules" ColumnName="violation_of_rules" />
+          <ScalarProperty Name="motor_veh_inc" ColumnName="motor_veh_inc" />
+          <ScalarProperty Name="immediate_action" ColumnName="immediate_action" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="exposure_freequency" ColumnName="exposure_freequency" />
+          <ScalarProperty Name="eyewitness_statement" ColumnName="eyewitness_statement" />
+          <ScalarProperty Name="risk_of_injury" ColumnName="risk_of_injury" />
+          <ScalarProperty Name="probability" ColumnName="probability" />
+          <ScalarProperty Name="investigation_attached" ColumnName="investigation_attached" />
+          <ScalarProperty Name="investigation_report" ColumnName="investigation_report" />
+          <ScalarProperty Name="other_attachment" ColumnName="other_attachment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hazard_sub_emp_exp">
+      <EntityTypeMapping TypeName="qhsedbModel.hazard_sub_emp_exp">
+        <MappingFragment StoreEntitySet="hazard_sub_emp_exp">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="incident_ref_no" ColumnName="incident_ref_no" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_dept" ColumnName="work_dept" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="dt_of_exposure" ColumnName="dt_of_exposure" />
+          <ScalarProperty Name="dur_of_exposure" ColumnName="dur_of_exposure" />
+          <ScalarProperty Name="loc_of_exposure" ColumnName="loc_of_exposure" />
+          <ScalarProperty Name="chemical_name" ColumnName="chemical_name" />
+          <ScalarProperty Name="chemical_abstract" ColumnName="chemical_abstract" />
+          <ScalarProperty Name="trad_name_chem" ColumnName="trad_name_chem" />
+          <ScalarProperty Name="type_of_exposure" ColumnName="type_of_exposure" />
+          <ScalarProperty Name="if_contact_WPBI" ColumnName="if_contact_WPBI" />
+          <ScalarProperty Name="how_did_expo_occur" ColumnName="how_did_expo_occur" />
+          <ScalarProperty Name="was_PPE_avail" ColumnName="was_PPE_avail" />
+          <ScalarProperty Name="was_PPE_used" ColumnName="was_PPE_used" />
+          <ScalarProperty Name="if_PPE" ColumnName="if_PPE" />
+          <ScalarProperty Name="was_PTI" ColumnName="was_PTI" />
+          <ScalarProperty Name="were_any_symp" ColumnName="were_any_symp" />
+          <ScalarProperty Name="if_so_desc" ColumnName="if_so_desc" />
+          <ScalarProperty Name="severity_of_exposure" ColumnName="severity_of_exposure" />
+          <ScalarProperty Name="desc_sev_of_exposure" ColumnName="desc_sev_of_exposure" />
+          <ScalarProperty Name="long_time_from_work" ColumnName="long_time_from_work" />
+          <ScalarProperty Name="est_lost_time" ColumnName="est_lost_time" />
+          <ScalarProperty Name="list_sug" ColumnName="list_sug" />
+          <ScalarProperty Name="supervisor" ColumnName="supervisor" />
+          <ScalarProperty Name="MSDS" ColumnName="MSDS" />
+          <ScalarProperty Name="physicians_report" ColumnName="physicians_report" />
+          <ScalarProperty Name="invest_report" ColumnName="invest_report" />
+          <ScalarProperty Name="other_attachment" ColumnName="other_attachment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="journey_mgmt">
+      <EntityTypeMapping TypeName="qhsedbModel.journey_mgmt">
+        <MappingFragment StoreEntitySet="journey_mgmt">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+          <ScalarProperty Name="co_driver_name" ColumnName="co_driver_name" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="journey_status" ColumnName="journey_status" />
+          <ScalarProperty Name="vehicle_id" ColumnName="vehicle_id" />
+          <ScalarProperty Name="start_location" ColumnName="start_location" />
+          <ScalarProperty Name="destination" ColumnName="destination" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="start_dt" ColumnName="start_dt" />
+          <ScalarProperty Name="arrival_dt" ColumnName="arrival_dt" />
+          <ScalarProperty Name="total_distance" ColumnName="total_distance" />
+          <ScalarProperty Name="total_travel_time" ColumnName="total_travel_time" />
+          <ScalarProperty Name="rest_time" ColumnName="rest_time" />
+          <ScalarProperty Name="supervisor_start" ColumnName="supervisor_start" />
+          <ScalarProperty Name="supervisor_phone_start" ColumnName="supervisor_phone_start" />
+          <ScalarProperty Name="supervisor_arrival" ColumnName="supervisor_arrival" />
+          <ScalarProperty Name="supervisor_phone_arrival" ColumnName="supervisor_phone_arrival" />
+          <ScalarProperty Name="flight_route" ColumnName="flight_route" />
+          <ScalarProperty Name="attach_map" ColumnName="attach_map" />
+          <ScalarProperty Name="attach_directions" ColumnName="attach_directions" />
+          <ScalarProperty Name="attach_other" ColumnName="attach_other" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="legal_other_requierments">
+      <EntityTypeMapping TypeName="qhsedbModel.legal_other_requierments">
+        <MappingFragment StoreEntitySet="legal_other_requierments">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="legal_other_requierments_date" ColumnName="legal_other_requierments_date" />
+          <ScalarProperty Name="description_of_requirements" ColumnName="description_of_requirements" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="attach_requirements" ColumnName="attach_requirements" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="medicals">
+      <EntityTypeMapping TypeName="qhsedbModel.medical">
+        <MappingFragment StoreEntitySet="medical">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="work_department" ColumnName="work_department" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="doctor_name" ColumnName="doctor_name" />
+          <ScalarProperty Name="doctor_number" ColumnName="doctor_number" />
+          <ScalarProperty Name="medical_condition" ColumnName="medical_condition" />
+          <ScalarProperty Name="medications" ColumnName="medications" />
+          <ScalarProperty Name="emergency_instructions" ColumnName="emergency_instructions" />
+          <ScalarProperty Name="attachments" ColumnName="attachments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="meeting_planning_work">
+      <EntityTypeMapping TypeName="qhsedbModel.meeting_planning_work">
+        <MappingFragment StoreEntitySet="meeting_planning_work">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="dt_meeting" ColumnName="dt_meeting" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_dept" ColumnName="work_dept" />
+          <ScalarProperty Name="meeting_subject" ColumnName="meeting_subject" />
+          <ScalarProperty Name="meeting_description" ColumnName="meeting_description" />
+          <ScalarProperty Name="required_attendance" ColumnName="required_attendance" />
+          <ScalarProperty Name="gen_obj_meting" ColumnName="gen_obj_meting" />
+          <ScalarProperty Name="desired_end_result" ColumnName="desired_end_result" />
+          <ScalarProperty Name="planning_detail" ColumnName="planning_detail" />
+          <ScalarProperty Name="meeting_prep_checklist" ColumnName="meeting_prep_checklist" />
+          <ScalarProperty Name="attacchment_1" ColumnName="attacchment_1" />
+          <ScalarProperty Name="attacment" ColumnName="attacment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mgmt_rev_agenda">
+      <EntityTypeMapping TypeName="qhsedbModel.mgmt_rev_agenda">
+        <MappingFragment StoreEntitySet="mgmt_rev_agenda">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="meeting_time" ColumnName="meeting_time" />
+          <ScalarProperty Name="objective" ColumnName="objective" />
+          <ScalarProperty Name="meeting_called_by" ColumnName="meeting_called_by" />
+          <ScalarProperty Name="dt_of_meeting" ColumnName="dt_of_meeting" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="topics_of_discussion" ColumnName="topics_of_discussion" />
+          <ScalarProperty Name="desc_if_other" ColumnName="desc_if_other" />
+          <ScalarProperty Name="attendance_req_by" ColumnName="attendance_req_by" />
+          <ScalarProperty Name="spec_meeting_top" ColumnName="spec_meeting_top" />
+          <ScalarProperty Name="add_com_ins" ColumnName="add_com_ins" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+          <ScalarProperty Name="attachment_2" ColumnName="attachment_2" />
+          <ScalarProperty Name="attachment_3" ColumnName="attachment_3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mgmt_rev_minute">
+      <EntityTypeMapping TypeName="qhsedbModel.mgmt_rev_minute">
+        <MappingFragment StoreEntitySet="mgmt_rev_minute">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dt_of_meeting" ColumnName="dt_of_meeting" />
+          <ScalarProperty Name="meeting_title" ColumnName="meeting_title" />
+          <ScalarProperty Name="obj_discussed" ColumnName="obj_discussed" />
+          <ScalarProperty Name="meeting_cllaed_by" ColumnName="meeting_cllaed_by" />
+          <ScalarProperty Name="min_sub_by" ColumnName="min_sub_by" />
+          <ScalarProperty Name="loc_of_meeting" ColumnName="loc_of_meeting" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="topics_discussed" ColumnName="topics_discussed" />
+          <ScalarProperty Name="desc_if_other" ColumnName="desc_if_other" />
+          <ScalarProperty Name="in_attendance" ColumnName="in_attendance" />
+          <ScalarProperty Name="meeting_top_iss" ColumnName="meeting_top_iss" />
+          <ScalarProperty Name="add_comm_ins" ColumnName="add_comm_ins" />
+          <ScalarProperty Name="sign_in_sheet" ColumnName="sign_in_sheet" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+          <ScalarProperty Name="attachment_2" ColumnName="attachment_2" />
+          <ScalarProperty Name="attachment_3" ColumnName="attachment_3" />
+          <ScalarProperty Name="attachment_4" ColumnName="attachment_4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="monthly_safety_summary">
+      <EntityTypeMapping TypeName="qhsedbModel.monthly_safety_summary">
+        <MappingFragment StoreEntitySet="monthly_safety_summary">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="for_month" ColumnName="for_month" />
+          <ScalarProperty Name="for_year" ColumnName="for_year" />
+          <ScalarProperty Name="inspections" ColumnName="inspections" />
+          <ScalarProperty Name="internal_audits" ColumnName="internal_audits" />
+          <ScalarProperty Name="mgmt_safety_visit" ColumnName="mgmt_safety_visit" />
+          <ScalarProperty Name="emerg_res_drill" ColumnName="emerg_res_drill" />
+          <ScalarProperty Name="safety_orientation" ColumnName="safety_orientation" />
+          <ScalarProperty Name="JSA" ColumnName="JSA" />
+          <ScalarProperty Name="remedial_actions" ColumnName="remedial_actions" />
+          <ScalarProperty Name="training_hours" ColumnName="training_hours" />
+          <ScalarProperty Name="work_refusals" ColumnName="work_refusals" />
+          <ScalarProperty Name="tailgate_toolbox" ColumnName="tailgate_toolbox" />
+          <ScalarProperty Name="gen_safety_meeting" ColumnName="gen_safety_meeting" />
+          <ScalarProperty Name="dept_area" ColumnName="dept_area" />
+          <ScalarProperty Name="mgmt_review" ColumnName="mgmt_review" />
+          <ScalarProperty Name="fatalities" ColumnName="fatalities" />
+          <ScalarProperty Name="lost_time_inc" ColumnName="lost_time_inc" />
+          <ScalarProperty Name="restricted_work_cases" ColumnName="restricted_work_cases" />
+          <ScalarProperty Name="medical_treatment" ColumnName="medical_treatment" />
+          <ScalarProperty Name="first_aid_treatment" ColumnName="first_aid_treatment" />
+          <ScalarProperty Name="non_work_related" ColumnName="non_work_related" />
+          <ScalarProperty Name="motor_vehicle_inc" ColumnName="motor_vehicle_inc" />
+          <ScalarProperty Name="near_misses" ColumnName="near_misses" />
+          <ScalarProperty Name="equipment_damage" ColumnName="equipment_damage" />
+          <ScalarProperty Name="equipment_losses" ColumnName="equipment_losses" />
+          <ScalarProperty Name="environment_dist" ColumnName="environment_dist" />
+          <ScalarProperty Name="attachment" ColumnName="attachment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="next_of_kin">
+      <EntityTypeMapping TypeName="qhsedbModel.next_of_kin">
+        <MappingFragment StoreEntitySet="next_of_kin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="kin_full_name" ColumnName="kin_full_name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="relationship" ColumnName="relationship" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="home_phone" ColumnName="home_phone" />
+          <ScalarProperty Name="cell_phone" ColumnName="cell_phone" />
+          <ScalarProperty Name="email_address" ColumnName="email_address" />
+          <ScalarProperty Name="address_option" ColumnName="address_option" />
+          <ScalarProperty Name="street_address" ColumnName="street_address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="postal_code" ColumnName="postal_code" />
+          <ScalarProperty Name="state_province" ColumnName="state_province" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="occupational_history_form">
+      <EntityTypeMapping TypeName="qhsedbModel.occupational_history_form">
+        <MappingFragment StoreEntitySet="occupational_history_form">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="work_department" ColumnName="work_department" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="from_date" ColumnName="from_date" />
+          <ScalarProperty Name="to_date" ColumnName="to_date" />
+          <ScalarProperty Name="job_title" ColumnName="job_title" />
+          <ScalarProperty Name="physical" ColumnName="physical" />
+          <ScalarProperty Name="chemical" ColumnName="chemical" />
+          <ScalarProperty Name="biological" ColumnName="biological" />
+          <ScalarProperty Name="psychological" ColumnName="psychological" />
+          <ScalarProperty Name="PPE" ColumnName="PPE" />
+          <ScalarProperty Name="secondary_work" ColumnName="secondary_work" />
+          <ScalarProperty Name="hobbies_sports" ColumnName="hobbies_sports" />
+          <ScalarProperty Name="work_related_exp" ColumnName="work_related_exp" />
+          <ScalarProperty Name="reproductive" ColumnName="reproductive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ohs_comm_agenda">
+      <EntityTypeMapping TypeName="qhsedbModel.ohs_comm_agenda">
+        <MappingFragment StoreEntitySet="ohs_comm_agenda">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dt_meeting" ColumnName="dt_meeting" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="total_no_emp" ColumnName="total_no_emp" />
+          <ScalarProperty Name="no_issues_def" ColumnName="no_issues_def" />
+          <ScalarProperty Name="required_attendance" ColumnName="required_attendance" />
+          <ScalarProperty Name="employer_co_chair" ColumnName="employer_co_chair" />
+          <ScalarProperty Name="worker_co_chair" ColumnName="worker_co_chair" />
+          <ScalarProperty Name="guests" ColumnName="guests" />
+          <ScalarProperty Name="no_of_workplace_con" ColumnName="no_of_workplace_con" />
+          <ScalarProperty Name="no_issues_identified" ColumnName="no_issues_identified" />
+          <ScalarProperty Name="no_complaint_received" ColumnName="no_complaint_received" />
+          <ScalarProperty Name="were_there_issues" ColumnName="were_there_issues" />
+          <ScalarProperty Name="no_acc_inv_con" ColumnName="no_acc_inv_con" />
+          <ScalarProperty Name="no_inc_inv_con" ColumnName="no_inc_inv_con" />
+          <ScalarProperty Name="were_there_any_issues" ColumnName="were_there_any_issues" />
+          <ScalarProperty Name="no_inc_report_review" ColumnName="no_inc_report_review" />
+          <ScalarProperty Name="no_acc_report_review" ColumnName="no_acc_report_review" />
+          <ScalarProperty Name="no_work_refusals" ColumnName="no_work_refusals" />
+          <ScalarProperty Name="meeting_topics_issues" ColumnName="meeting_topics_issues" />
+          <ScalarProperty Name="add_com_ins" ColumnName="add_com_ins" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+          <ScalarProperty Name="attachment_2" ColumnName="attachment_2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ohs_committee">
+      <EntityTypeMapping TypeName="qhsedbModel.ohs_committee">
+        <MappingFragment StoreEntitySet="ohs_committee">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dt_meeting" ColumnName="dt_meeting" />
+          <ScalarProperty Name="meeting_title" ColumnName="meeting_title" />
+          <ScalarProperty Name="meeting_called_by" ColumnName="meeting_called_by" />
+          <ScalarProperty Name="min_sub_by" ColumnName="min_sub_by" />
+          <ScalarProperty Name="location_of_meet" ColumnName="location_of_meet" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="employer_co_chair" ColumnName="employer_co_chair" />
+          <ScalarProperty Name="worker_co_chair" ColumnName="worker_co_chair" />
+          <ScalarProperty Name="comm_rep_cer" ColumnName="comm_rep_cer" />
+          <ScalarProperty Name="meeting_topic" ColumnName="meeting_topic" />
+          <ScalarProperty Name="add_comm_ins" ColumnName="add_comm_ins" />
+          <ScalarProperty Name="sign_in_sheet" ColumnName="sign_in_sheet" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+          <ScalarProperty Name="atachment_2" ColumnName="atachment_2" />
+          <ScalarProperty Name="attachment_3" ColumnName="attachment_3" />
+          <ScalarProperty Name="attachment_4" ColumnName="attachment_4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orientation_tr_mat">
+      <EntityTypeMapping TypeName="qhsedbModel.orientation_tr_mat">
+        <MappingFragment StoreEntitySet="orientation_tr_mat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="review_date" ColumnName="review_date" />
+          <ScalarProperty Name="work_dept" ColumnName="work_dept" />
+          <ScalarProperty Name="desc_train_ori" ColumnName="desc_train_ori" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="orient_file_1" ColumnName="orient_file_1" />
+          <ScalarProperty Name="orient_fiile_2" ColumnName="orient_fiile_2" />
+          <ScalarProperty Name="orient_file_3" ColumnName="orient_file_3" />
+          <ScalarProperty Name="orient_file_4" ColumnName="orient_file_4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prob_solv_meet_rep">
+      <EntityTypeMapping TypeName="qhsedbModel.prob_solv_meet_rep">
+        <MappingFragment StoreEntitySet="prob_solv_meet_rep">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_dept" ColumnName="work_dept" />
+          <ScalarProperty Name="meeting_leader" ColumnName="meeting_leader" />
+          <ScalarProperty Name="problem" ColumnName="problem" />
+          <ScalarProperty Name="analysis" ColumnName="analysis" />
+          <ScalarProperty Name="corrective_action" ColumnName="corrective_action" />
+          <ScalarProperty Name="follow_up" ColumnName="follow_up" />
+          <ScalarProperty Name="other_PAA" ColumnName="other_PAA" />
+          <ScalarProperty Name="attendance" ColumnName="attendance" />
+          <ScalarProperty Name="reviewed_by" ColumnName="reviewed_by" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+          <ScalarProperty Name="attchment_2" ColumnName="attchment_2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="qualifications">
+      <EntityTypeMapping TypeName="qhsedbModel.qualification">
+        <MappingFragment StoreEntitySet="qualification">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="work_department" ColumnName="work_department" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="qualification_date" ColumnName="qualification_date" />
+          <ScalarProperty Name="q_expiry_date" ColumnName="q_expiry_date" />
+          <ScalarProperty Name="qualification1" ColumnName="qualification" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="attach_certificate" ColumnName="attach_certificate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="return_to_work_plan">
+      <EntityTypeMapping TypeName="qhsedbModel.return_to_work_plan">
+        <MappingFragment StoreEntitySet="return_to_work_plan">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="incident_ref_no" ColumnName="incident_ref_no" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_dept" ColumnName="work_dept" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="claim_no" ColumnName="claim_no" />
+          <ScalarProperty Name="supevisor" ColumnName="supevisor" />
+          <ScalarProperty Name="RTW_coordinator" ColumnName="RTW_coordinator" />
+          <ScalarProperty Name="week_no" ColumnName="week_no" />
+          <ScalarProperty Name="objectives" ColumnName="objectives" />
+          <ScalarProperty Name="limitations" ColumnName="limitations" />
+          <ScalarProperty Name="duties" ColumnName="duties" />
+          <ScalarProperty Name="hours" ColumnName="hours" />
+          <ScalarProperty Name="employee_comm_con" ColumnName="employee_comm_con" />
+          <ScalarProperty Name="action_to_addr" ColumnName="action_to_addr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="safe_work_procedure">
+      <EntityTypeMapping TypeName="qhsedbModel.safe_work_procedure">
+        <MappingFragment StoreEntitySet="safe_work_procedure">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="safe_work_procedure_description" ColumnName="safe_work_procedure_description" />
+          <ScalarProperty Name="development_date" ColumnName="development_date" />
+          <ScalarProperty Name="version_number" ColumnName="version_number" />
+          <ScalarProperty Name="review_date" ColumnName="review_date" />
+          <ScalarProperty Name="next_review_date" ColumnName="next_review_date" />
+          <ScalarProperty Name="swp_notes" ColumnName="swp_notes" />
+          <ScalarProperty Name="attach_other" ColumnName="attach_other" />
+          <ScalarProperty Name="attach_swp" ColumnName="attach_swp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tool_box_topic">
+      <EntityTypeMapping TypeName="qhsedbModel.tool_box_topic">
+        <MappingFragment StoreEntitySet="tool_box_topic">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="topic_desc" ColumnName="topic_desc" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_dept" ColumnName="work_dept" />
+          <ScalarProperty Name="topic" ColumnName="topic" />
+          <ScalarProperty Name="question_concern" ColumnName="question_concern" />
+          <ScalarProperty Name="developer" ColumnName="developer" />
+          <ScalarProperty Name="supervisor" ColumnName="supervisor" />
+          <ScalarProperty Name="attach_tool" ColumnName="attach_tool" />
+          <ScalarProperty Name="other_attachment" ColumnName="other_attachment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="train_aware_comp">
+      <EntityTypeMapping TypeName="qhsedbModel.train_aware_comp">
+        <MappingFragment StoreEntitySet="train_aware_comp">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_area" ColumnName="work_area" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="train_obtain" ColumnName="train_obtain" />
+          <ScalarProperty Name="train_desc" ColumnName="train_desc" />
+          <ScalarProperty Name="train_prov" ColumnName="train_prov" />
+          <ScalarProperty Name="certificat_number" ColumnName="certificat_number" />
+          <ScalarProperty Name="issue_date" ColumnName="issue_date" />
+          <ScalarProperty Name="expiry_date" ColumnName="expiry_date" />
+          <ScalarProperty Name="cert_on_file" ColumnName="cert_on_file" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="certificate" ColumnName="certificate" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="witness_statement">
+      <EntityTypeMapping TypeName="qhsedbModel.witness_statement">
+        <MappingFragment StoreEntitySet="witness_statement">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="incident_ref_no" ColumnName="incident_ref_no" />
+          <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="work_area_dept" ColumnName="work_area_dept" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="name_TP" ColumnName="name_TP" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email_addr" ColumnName="email_addr" />
+          <ScalarProperty Name="addrress" ColumnName="addrress" />
+          <ScalarProperty Name="state_province" ColumnName="state_province" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="employer" ColumnName="employer" />
+          <ScalarProperty Name="first_wit_name" ColumnName="first_wit_name" />
+          <ScalarProperty Name="first_wit_phone" ColumnName="first_wit_phone" />
+          <ScalarProperty Name="first_wit_comp" ColumnName="first_wit_comp" />
+          <ScalarProperty Name="second_wit_name" ColumnName="second_wit_name" />
+          <ScalarProperty Name="second_wit_phone" ColumnName="second_wit_phone" />
+          <ScalarProperty Name="second_wit_comp" ColumnName="second_wit_comp" />
+          <ScalarProperty Name="third_wit_name" ColumnName="third_wit_name" />
+          <ScalarProperty Name="third_wit_phone" ColumnName="third_wit_phone" />
+          <ScalarProperty Name="third_wit_comp" ColumnName="third_wit_comp" />
+          <ScalarProperty Name="incident_desc" ColumnName="incident_desc" />
+          <ScalarProperty Name="statement" ColumnName="statement" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="sig_date" ColumnName="sig_date" />
+          <ScalarProperty Name="signed_witness_stmt" ColumnName="signed_witness_stmt" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+          <ScalarProperty Name="attachment_2" ColumnName="attachment_2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="worker_comp_insurace_reports_stats">
+      <EntityTypeMapping TypeName="qhsedbModel.worker_comp_insurace_reports_stats">
+        <MappingFragment StoreEntitySet="worker_comp_insurace_reports_stats">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="worker_comp_insurace_reports_stats_date" ColumnName="worker_comp_insurace_reports_stats_date" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="department_work_area" ColumnName="department_work_area" />
+          <ScalarProperty Name="details" ColumnName="details" />
+          <ScalarProperty Name="attachment_1" ColumnName="attachment_1" />
+          <ScalarProperty Name="attachment_2" ColumnName="attachment_2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
